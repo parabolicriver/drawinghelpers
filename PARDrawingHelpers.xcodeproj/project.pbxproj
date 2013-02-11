@@ -59,7 +59,7 @@
 		A070E02016C92604007B8F6D = {
 			isa = PBXGroup;
 			children = (
-				A070E05216C9264E007B8F6D /* View and Layer Drawing */,
+				A070E05216C9264E007B8F6D /* View Drawing */,
 				A070E03516C92604007B8F6D /* PARDrawingHelpers */,
 				A070E02E16C92604007B8F6D /* Frameworks */,
 				A070E02C16C92604007B8F6D /* Products */,
@@ -111,13 +111,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A070E05216C9264E007B8F6D /* View and Layer Drawing */ = {
+		A070E05216C9264E007B8F6D /* View Drawing */ = {
 			isa = PBXGroup;
 			children = (
 				A070E05616C9271D007B8F6D /* UIView+DrawingHelpers.h */,
 				A070E05716C9271D007B8F6D /* UIView+DrawingHelpers.m */,
 			);
-			name = "View and Layer Drawing";
+			name = "View Drawing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

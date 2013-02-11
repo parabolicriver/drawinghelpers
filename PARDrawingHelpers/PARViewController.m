@@ -7,6 +7,7 @@
 //
 
 #import "PARViewController.h"
+#import "UIView+DrawingHelpers.h"
 
 @interface PARViewController ()
 
@@ -18,6 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    BOOL isiPad = [UIView isiPad];
+    if (isiPad)
+    {
+        BOOL isPortrait = [UIView isPortrait];
+        NSLog(@"view bounds %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
+    }
 }
 
 - (void)didReceiveMemoryWarning
