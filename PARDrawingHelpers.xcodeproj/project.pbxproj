@@ -18,6 +18,7 @@
 		A070E04616C92604007B8F6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A070E04516C92604007B8F6D /* Default-568h@2x.png */; };
 		A070E04916C92604007B8F6D /* PARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E04816C92604007B8F6D /* PARViewController.m */; };
 		A070E04C16C92604007B8F6D /* PARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A070E04A16C92604007B8F6D /* PARViewController.xib */; };
+		A070E05816C9271D007B8F6D /* UIView+DrawingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E05716C9271D007B8F6D /* UIView+DrawingHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		A070E04716C92604007B8F6D /* PARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PARViewController.h; sourceTree = "<group>"; };
 		A070E04816C92604007B8F6D /* PARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PARViewController.m; sourceTree = "<group>"; };
 		A070E04B16C92604007B8F6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PARViewController.xib; sourceTree = "<group>"; };
+		A070E05616C9271D007B8F6D /* UIView+DrawingHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawingHelpers.h"; sourceTree = "<group>"; };
+		A070E05716C9271D007B8F6D /* UIView+DrawingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawingHelpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		A070E02016C92604007B8F6D = {
 			isa = PBXGroup;
 			children = (
+				A070E05216C9264E007B8F6D /* View and Layer Drawing */,
 				A070E03516C92604007B8F6D /* PARDrawingHelpers */,
 				A070E02E16C92604007B8F6D /* Frameworks */,
 				A070E02C16C92604007B8F6D /* Products */,
@@ -105,6 +109,15 @@
 				A070E04516C92604007B8F6D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A070E05216C9264E007B8F6D /* View and Layer Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				A070E05616C9271D007B8F6D /* UIView+DrawingHelpers.h */,
+				A070E05716C9271D007B8F6D /* UIView+DrawingHelpers.m */,
+			);
+			name = "View and Layer Drawing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 				A070E03C16C92604007B8F6D /* main.m in Sources */,
 				A070E04016C92604007B8F6D /* PARAppDelegate.m in Sources */,
 				A070E04916C92604007B8F6D /* PARViewController.m in Sources */,
+				A070E05816C9271D007B8F6D /* UIView+DrawingHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
