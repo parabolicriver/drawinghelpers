@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A070E03016C92604007B8F6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E02F16C92604007B8F6D /* UIKit.framework */; };
+		A070E03216C92604007B8F6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03116C92604007B8F6D /* Foundation.framework */; };
+		A070E03416C92604007B8F6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03316C92604007B8F6D /* CoreGraphics.framework */; };
+		A070E03A16C92604007B8F6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A070E03816C92604007B8F6D /* InfoPlist.strings */; };
+		A070E03C16C92604007B8F6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E03B16C92604007B8F6D /* main.m */; };
+		A070E04016C92604007B8F6D /* PARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E03F16C92604007B8F6D /* PARAppDelegate.m */; };
+		A070E04216C92604007B8F6D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A070E04116C92604007B8F6D /* Default.png */; };
+		A070E04416C92604007B8F6D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A070E04316C92604007B8F6D /* Default@2x.png */; };
+		A070E04616C92604007B8F6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A070E04516C92604007B8F6D /* Default-568h@2x.png */; };
+		A070E04916C92604007B8F6D /* PARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A070E04816C92604007B8F6D /* PARViewController.m */; };
+		A070E04C16C92604007B8F6D /* PARViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A070E04A16C92604007B8F6D /* PARViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A070E02B16C92604007B8F6D /* PARDrawingHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PARDrawingHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A070E02F16C92604007B8F6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A070E03116C92604007B8F6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A070E03316C92604007B8F6D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A070E03716C92604007B8F6D /* PARDrawingHelpers-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PARDrawingHelpers-Info.plist"; sourceTree = "<group>"; };
+		A070E03916C92604007B8F6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A070E03B16C92604007B8F6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A070E03D16C92604007B8F6D /* PARDrawingHelpers-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PARDrawingHelpers-Prefix.pch"; sourceTree = "<group>"; };
+		A070E03E16C92604007B8F6D /* PARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PARAppDelegate.h; sourceTree = "<group>"; };
+		A070E03F16C92604007B8F6D /* PARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PARAppDelegate.m; sourceTree = "<group>"; };
+		A070E04116C92604007B8F6D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A070E04316C92604007B8F6D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A070E04516C92604007B8F6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A070E04716C92604007B8F6D /* PARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PARViewController.h; sourceTree = "<group>"; };
+		A070E04816C92604007B8F6D /* PARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PARViewController.m; sourceTree = "<group>"; };
+		A070E04B16C92604007B8F6D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PARViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A070E02816C92604007B8F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A070E03016C92604007B8F6D /* UIKit.framework in Frameworks */,
+				A070E03216C92604007B8F6D /* Foundation.framework in Frameworks */,
+				A070E03416C92604007B8F6D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A070E02016C92604007B8F6D = {
+			isa = PBXGroup;
+			children = (
+				A070E03516C92604007B8F6D /* PARDrawingHelpers */,
+				A070E02E16C92604007B8F6D /* Frameworks */,
+				A070E02C16C92604007B8F6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A070E02C16C92604007B8F6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A070E02B16C92604007B8F6D /* PARDrawingHelpers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A070E02E16C92604007B8F6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A070E02F16C92604007B8F6D /* UIKit.framework */,
+				A070E03116C92604007B8F6D /* Foundation.framework */,
+				A070E03316C92604007B8F6D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A070E03516C92604007B8F6D /* PARDrawingHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				A070E03E16C92604007B8F6D /* PARAppDelegate.h */,
+				A070E03F16C92604007B8F6D /* PARAppDelegate.m */,
+				A070E04716C92604007B8F6D /* PARViewController.h */,
+				A070E04816C92604007B8F6D /* PARViewController.m */,
+				A070E04A16C92604007B8F6D /* PARViewController.xib */,
+				A070E03616C92604007B8F6D /* Supporting Files */,
+			);
+			path = PARDrawingHelpers;
+			sourceTree = "<group>";
+		};
+		A070E03616C92604007B8F6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A070E03716C92604007B8F6D /* PARDrawingHelpers-Info.plist */,
+				A070E03816C92604007B8F6D /* InfoPlist.strings */,
+				A070E03B16C92604007B8F6D /* main.m */,
+				A070E03D16C92604007B8F6D /* PARDrawingHelpers-Prefix.pch */,
+				A070E04116C92604007B8F6D /* Default.png */,
+				A070E04316C92604007B8F6D /* Default@2x.png */,
+				A070E04516C92604007B8F6D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A070E02A16C92604007B8F6D /* PARDrawingHelpers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A070E04F16C92604007B8F6D /* Build configuration list for PBXNativeTarget "PARDrawingHelpers" */;
+			buildPhases = (
+				A070E02716C92604007B8F6D /* Sources */,
+				A070E02816C92604007B8F6D /* Frameworks */,
+				A070E02916C92604007B8F6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PARDrawingHelpers;
+			productName = PARDrawingHelpers;
+			productReference = A070E02B16C92604007B8F6D /* PARDrawingHelpers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A070E02216C92604007B8F6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PAR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Parabolic River";
+			};
+			buildConfigurationList = A070E02516C92604007B8F6D /* Build configuration list for PBXProject "PARDrawingHelpers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A070E02016C92604007B8F6D;
+			productRefGroup = A070E02C16C92604007B8F6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A070E02A16C92604007B8F6D /* PARDrawingHelpers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A070E02916C92604007B8F6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A070E03A16C92604007B8F6D /* InfoPlist.strings in Resources */,
+				A070E04216C92604007B8F6D /* Default.png in Resources */,
+				A070E04416C92604007B8F6D /* Default@2x.png in Resources */,
+				A070E04616C92604007B8F6D /* Default-568h@2x.png in Resources */,
+				A070E04C16C92604007B8F6D /* PARViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A070E02716C92604007B8F6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A070E03C16C92604007B8F6D /* main.m in Sources */,
+				A070E04016C92604007B8F6D /* PARAppDelegate.m in Sources */,
+				A070E04916C92604007B8F6D /* PARViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A070E03816C92604007B8F6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A070E03916C92604007B8F6D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A070E04A16C92604007B8F6D /* PARViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A070E04B16C92604007B8F6D /* en */,
+			);
+			name = PARViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A070E04D16C92604007B8F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A070E04E16C92604007B8F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A070E05016C92604007B8F6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
+				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A070E05116C92604007B8F6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
+				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A070E02516C92604007B8F6D /* Build configuration list for PBXProject "PARDrawingHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A070E04D16C92604007B8F6D /* Debug */,
+				A070E04E16C92604007B8F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A070E04F16C92604007B8F6D /* Build configuration list for PBXNativeTarget "PARDrawingHelpers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A070E05016C92604007B8F6D /* Debug */,
+				A070E05116C92604007B8F6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A070E02216C92604007B8F6D /* Project object */;
+}
