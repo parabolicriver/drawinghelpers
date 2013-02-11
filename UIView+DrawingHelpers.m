@@ -1,6 +1,6 @@
 //
 //  UIView+DrawingHelpers.m
-//  HIIT Stopwatch
+//  PARDrawingHelpers
 //
 //  Created by Anuj Seth on 1/27/13.
 //  Copyright (c) 2013 Parabolic River. All rights reserved.
