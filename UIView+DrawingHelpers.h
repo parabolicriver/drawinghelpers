@@ -25,14 +25,14 @@
 
 /** iPhone Sizes. **/
 
-+ (CGFloat)iPhoneWidth;
-+ (CGFloat)iPhoneHeight;
-+ (CGFloat)iPhoneRetina4Width;
-+ (CGFloat)iPhoneRetina4Height;
-+ (CGSize)iPhoneScreenSize;
-+ (CGSize)iPhoneRetina4ScreenSize;
-+ (CGRect)iPhoneBounds;
-+ (CGRect)iPhoneRetina4Bounds;
++ (CGFloat)iPhoneWidth:(BOOL)landscape;
++ (CGFloat)iPhoneHeight:(BOOL)landscape;
++ (CGFloat)iPhoneRetina4Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina4Height:(BOOL)landscape;
++ (CGSize)iPhoneScreenSize:(BOOL)landscape;
++ (CGSize)iPhoneRetina4ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneBounds:(BOOL)landscape;
++ (CGRect)iPhoneRetina4Bounds:(BOOL)landscape;
 
 + (CGFloat)iPhoneStatusBarHeight;
 + (CGFloat)iPhoneNavigationBarHeight:(BOOL)landscape;

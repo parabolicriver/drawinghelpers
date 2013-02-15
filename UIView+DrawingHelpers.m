@@ -121,44 +121,72 @@
 
 #pragma mark - iPhone Sizes
 
-+ (CGFloat)iPhoneWidth
++ (CGFloat)iPhoneWidth:(BOOL)landscape
 {
-    return 320.0f;
+    if (landscape)
+    {
+        return 480.0f;
+    }
+    else
+    {
+        return 320.0f;
+    }
 }
 
-+ (CGFloat)iPhoneHeight
++ (CGFloat)iPhoneHeight:(BOOL)landscape
 {
-    return 480.0f;
+    if (landscape)
+    {
+        return 320.0f;
+    }
+    else
+    {
+        return 480.0f;
+    }
 }
 
-+ (CGFloat)iPhoneRetina4Width
++ (CGFloat)iPhoneRetina4Width:(BOOL)landscape
 {
-    return 320.0f;
+    if (landscape)
+    {
+        return 568.0f;
+    }
+    else
+    {
+        return 320.0f;
+    }
 }
 
-+ (CGFloat)iPhoneRetina4Height
++ (CGFloat)iPhoneRetina4Height:(BOOL)landscape
 {
-    return 568.0f;
+    if (landscape)
+    {
+        return 320.0f;
+    }
+    else
+    {
+        return 568.0f;
+    }
 }
 
-+ (CGSize)iPhoneScreenSize
++ (CGSize)iPhoneScreenSize:(BOOL)landscape
 {
-    return CGSizeMake([UIView iPhoneWidth], [UIView iPhoneHeight]);
+    return CGSizeMake([UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
 }
 
-+ (CGSize)iPhoneRetina4ScreenSize
++ (CGSize)iPhoneRetina4ScreenSize:(BOOL)landscape
 {
-    return CGSizeMake([UIView iPhoneRetina4Width], [UIView iPhoneRetina4Height]);
+    return CGSizeMake([UIView iPhoneRetina4Width:landscape], [UIView iPhoneRetina4Height:landscape]);
 }
 
-+ (CGRect)iPhoneBounds
++ (CGRect)iPhoneBounds:(BOOL)landscape
 {
-    return CGRectMake(0.0f, 0.0f, [UIView iPhoneWidth], [UIView iPhoneHeight]);
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
 }
 
-+ (CGRect)iPhoneRetina4Bounds
++ (CGRect)iPhoneRetina4Bounds:(BOOL)landscape
 {
-    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina4Width], [UIView iPhoneRetina4Height]);
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina4Width:landscape], [UIView iPhoneRetina4Height:landscape]);
 }
 
 + (CGFloat)iPhoneStatusBarHeight
@@ -252,11 +280,11 @@
     
     if (landscape)
     {
-        keyboardSize = CGSizeMake([UIView iPhoneHeight], 162.0f);
+        keyboardSize = CGSizeMake([UIView iPhoneHeight:landscape], 162.0f);
     }
     else
     {
-        keyboardSize = CGSizeMake([UIView iPhoneWidth], 216.0f);
+        keyboardSize = CGSizeMake([UIView iPhoneWidth:landscape], 216.0f);
     }
     
     return keyboardSize;
