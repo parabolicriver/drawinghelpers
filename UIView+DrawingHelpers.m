@@ -244,4 +244,27 @@
     return 49.0f;
 }
 
+#pragma mark - Responder Helpers
+
++ (CGSize)iPhoneKeyboardSize
+{
+    return CGSizeMake(320.0f, 216.0f);
+}
+
++ (CGSize)iPadKeyboardSize:(BOOL)landscape
+{
+    CGSize keyboardSize = CGSizeMake(0.0f, 0.0f);
+    
+    if (landscape)
+    {
+        keyboardSize = CGSizeMake(352.0f, 1024.0f);
+    }
+    else
+    {
+        keyboardSize = CGSizeMake(768.0f, 264.0f);
+    }
+    
+    return keyboardSize;
+}
+
 @end

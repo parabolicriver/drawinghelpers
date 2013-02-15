@@ -51,4 +51,14 @@
 + (CGFloat)iPadToolbarHeight;
 + (CGFloat)iPadTabBarHeight;
 
+/** Responder helpers. **/
+
+/*
+ * Note:
+ * Tested with English default keyboards only.
+ */
+
++ (CGSize)iPhoneKeyboardSize;
++ (CGSize)iPadKeyboardSize:(BOOL)landscape;
+
 @end
