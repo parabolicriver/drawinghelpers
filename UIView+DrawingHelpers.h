@@ -58,7 +58,9 @@
  * Tested with English default keyboards only.
  */
 
-+ (CGSize)iPhoneKeyboardSize;
+// Always return the correct value in the height, i.e
+// unlike the keyboard notifications we don't flip values.
++ (CGSize)iPhoneKeyboardSize:(BOOL)landscape;
 + (CGSize)iPadKeyboardSize:(BOOL)landscape;
 
 @end

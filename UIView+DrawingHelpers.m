@@ -246,9 +246,20 @@
 
 #pragma mark - Responder Helpers
 
-+ (CGSize)iPhoneKeyboardSize
++ (CGSize)iPhoneKeyboardSize:(BOOL)landscape
 {
-    return CGSizeMake(320.0f, 216.0f);
+    CGSize keyboardSize = CGSizeMake(0.0f, 0.0f);
+    
+    if (landscape)
+    {
+        keyboardSize = CGSizeMake([UIView iPhoneHeight], 162.0f);
+    }
+    else
+    {
+        keyboardSize = CGSizeMake([UIView iPhoneWidth], 216.0f);
+    }
+    
+    return keyboardSize;
 }
 
 + (CGSize)iPadKeyboardSize:(BOOL)landscape
@@ -257,11 +268,11 @@
     
     if (landscape)
     {
-        keyboardSize = CGSizeMake(352.0f, 1024.0f);
+        keyboardSize = CGSizeMake([UIView iPadWidth:landscape], 352.0f);
     }
     else
     {
-        keyboardSize = CGSizeMake(768.0f, 264.0f);
+        keyboardSize = CGSizeMake([UIView iPadWidth:landscape], 264.0f);
     }
     
     return keyboardSize;
