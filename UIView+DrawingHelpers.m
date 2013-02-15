@@ -87,7 +87,7 @@
     }
     else if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight)
     {
-        return YES;
+        return NO;
     }
     // for all other cases assume portrait
     else
