@@ -18,7 +18,8 @@
 + (BOOL)isRetina4Inch;
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
-+ (BOOL)isPortrait;
++ (BOOL)isPortrait;                 // check using UIDevice
++ (BOOL)isPortraitFromStatusBar;    // check using UIApplication
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation;
 
 // All sizes in points.

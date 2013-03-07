@@ -96,6 +96,25 @@
     }
 }
 
++ (BOOL)isPortraitFromStatusBar
+{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if (orientation == UIInterfaceOrientationPortrait || orientation == UIInterfaceOrientationPortraitUpsideDown)
+    {
+        return YES;
+    }
+    else if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
+    {
+        return NO;
+    }
+    // for all other cases assume portrait
+    else
+    {
+        return YES;
+    }
+}
+
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation
 {
     if (orientation == UIInterfaceOrientationPortrait)
