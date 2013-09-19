@@ -11,6 +11,10 @@
 // Helpers for drawing views from code.
 @interface UIView (DrawingHelpers)
 
+/** iOS versions **/
+
++ (BOOL)iOS7AndLater;               // will return NO for iOS 6 etc.
+
 /** Screen properties. **/
 
 + (BOOL)isiPhone;

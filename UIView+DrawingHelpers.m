@@ -10,6 +10,20 @@
 
 @implementation UIView (DrawingHelpers)
 
+#pragma mark - iOS Versions
+
++ (BOOL)iOS7AndLater
+{    
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 #pragma mark - Screen Properties
 
 + (BOOL)isiPhone
