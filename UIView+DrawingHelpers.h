@@ -26,9 +26,9 @@
 + (BOOL)isPortraitFromStatusBar;    // check using UIApplication
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation;
 
-// All sizes in points.
-
 /** iPhone Sizes. **/
+
+// All sizes in points.
 
 + (CGFloat)iPhoneWidth:(BOOL)landscape;
 + (CGFloat)iPhoneHeight:(BOOL)landscape;
