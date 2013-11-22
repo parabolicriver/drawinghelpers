@@ -339,4 +339,20 @@
     return keyboardSize;
 }
 
++ (UIColor *)backgroundColorForKeyboardAppearance:(UIKeyboardAppearance)appearance
+{
+    UIColor *bgColor = nil;
+    
+    if (appearance == UIKeyboardAppearanceLight)
+    {
+        bgColor = [UIColor colorWithRed:208/255.0f green:207/255.0f blue:210/255.0f alpha:1.0f];
+    }
+    else if (appearance == UIKeyboardAppearanceDark)
+    {
+        bgColor = [UIColor colorWithRed:79/255.0f green:79/255.0f blue:79/255.0f alpha:1.0f];
+    }
+    
+    return bgColor;
+}
+
 @end

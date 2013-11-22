@@ -67,5 +67,6 @@
 // unlike the keyboard notifications we don't flip values.
 + (CGSize)iPhoneKeyboardSize:(BOOL)landscape;
 + (CGSize)iPadKeyboardSize:(BOOL)landscape;
++ (UIColor *)backgroundColorForKeyboardAppearance:(UIKeyboardAppearance)appearance;     // approximate 
 
 @end
