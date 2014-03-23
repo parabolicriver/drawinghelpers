@@ -34,7 +34,8 @@
 + (BOOL)isLandscapeFromStatusBar;
 + (BOOL)isLandscapeLeftFromStatusBar;
 + (BOOL)isLandscapeRightFromStatusBar;
-+ (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation;
++ (NSString *)stringFromDeviceOrientation:(UIDeviceOrientation)orientation;
++ (NSString *)stringFromInterfaceOrientation:(UIInterfaceOrientation)orientation;
 // corresponding interface orientation for the device in the ideal case,
 // the actual interface orientation might be different for e.g. when
 // stock rotation is disabled

@@ -206,7 +206,38 @@
     return (orientation == UIInterfaceOrientationLandscapeRight);
 }
 
-+ (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation
++ (NSString *)stringFromDeviceOrientation:(UIDeviceOrientation)orientation
+{
+    if (orientation == UIDeviceOrientationPortrait)
+    {
+        return @"UIDeviceOrientationPortrait";
+    }
+    else if (orientation == UIDeviceOrientationPortraitUpsideDown)
+    {
+        return @"UIDeviceOrientationPortraitUpsideDown";
+    }
+    else if (orientation == UIDeviceOrientationLandscapeLeft)
+    {
+        return @"UIDeviceOrientationLandscapeLeft";
+    }
+    else if (orientation == UIDeviceOrientationLandscapeRight)
+    {
+        return @"UIDeviceOrientationLandscapeRight";
+    }
+    else if (orientation == UIDeviceOrientationFaceUp)
+    {
+        return @"UIDeviceOrientationFaceUp";
+    }
+    else if (orientation == UIDeviceOrientationFaceDown)
+    {
+        return @"UIDeviceOrientationFaceDown";
+    }
+    
+    // otherwise unknow i guess
+    return @"UIDeviceOrientationUnknown";
+}
+
++ (NSString *)stringFromInterfaceOrientation:(UIInterfaceOrientation)orientation
 {
     if (orientation == UIInterfaceOrientationPortrait)
     {
