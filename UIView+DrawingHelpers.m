@@ -219,6 +219,29 @@
     return @"UIInterfaceOrientationPortrait";
 }
 
++ (UIInterfaceOrientation)interfaceOrientationFromDeviceOrientation:(UIDeviceOrientation)deviceOrientation
+{
+    if (deviceOrientation == UIDeviceOrientationPortrait)
+    {
+        return UIInterfaceOrientationPortrait;
+    }
+    else if (deviceOrientation == UIDeviceOrientationPortraitUpsideDown)
+    {
+        return UIInterfaceOrientationPortraitUpsideDown;
+    }
+    else if (deviceOrientation == UIDeviceOrientationLandscapeRight)
+    {
+        return UIInterfaceOrientationLandscapeLeft;
+    }
+    else if (deviceOrientation == UIDeviceOrientationLandscapeLeft)
+    {
+        return UIInterfaceOrientationLandscapeRight;
+    }
+    
+    // assume portrait in all other cases
+    return UIInterfaceOrientationPortrait;
+}
+
 #pragma mark - iPhone Sizes
 
 + (CGFloat)iPhoneWidth:(BOOL)landscape
