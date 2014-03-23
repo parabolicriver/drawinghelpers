@@ -24,6 +24,7 @@
 + (BOOL)isRetinaiPad;
 + (BOOL)isPortrait;                 // check using UIDevice
 + (BOOL)isPortraitFromStatusBar;    // check using UIApplication
++ (BOOL)isPortraitUpsideDownFromStatusBar;
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation;
 
 /** iPhone Sizes. **/

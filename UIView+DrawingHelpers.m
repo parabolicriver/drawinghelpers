@@ -129,6 +129,13 @@
     }
 }
 
++ (BOOL)isPortraitUpsideDownFromStatusBar
+{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    return (orientation == UIInterfaceOrientationPortraitUpsideDown);
+}
+
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation
 {
     if (orientation == UIInterfaceOrientationPortrait)
