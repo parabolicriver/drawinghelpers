@@ -22,8 +22,12 @@
 + (BOOL)isRetina4Inch;
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
-+ (BOOL)isPortrait;                 // check using UIDevice
-+ (BOOL)isPortraitFromStatusBar;    // check using UIApplication
++ (BOOL)isPortrait;                 // check using UIDevice, device orientation checks
++ (BOOL)isPortraitUpsideDown;
++ (BOOL)isLandscape;
++ (BOOL)isLandscapeLeft;
++ (BOOL)isLandscapeRight;
++ (BOOL)isPortraitFromStatusBar;    // check using UIApplication, interface orientation checks
 + (BOOL)isPortraitUpsideDownFromStatusBar;
 + (BOOL)isLandscapeFromStatusBar;
 + (BOOL)isLandscapeLeftFromStatusBar;

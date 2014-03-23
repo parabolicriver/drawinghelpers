@@ -95,6 +95,7 @@
 + (BOOL)isPortrait
 {
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
     if (orientation == UIDeviceOrientationPortrait || orientation == UIDeviceOrientationPortraitUpsideDown)
     {
         return YES;
@@ -108,6 +109,39 @@
     {
         return YES;
     }
+}
+
++ (BOOL)isPortraitUpsideDown
+{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    return (orientation == UIDeviceOrientationPortraitUpsideDown);
+}
+
++ (BOOL)isLandscape
+{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight)
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
++ (BOOL)isLandscapeLeft
+{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    return (orientation == UIDeviceOrientationLandscapeLeft);
+}
+
++ (BOOL)isLandscapeRight
+{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    
+    return (orientation == UIDeviceOrientationLandscapeRight);
 }
 
 + (BOOL)isPortraitFromStatusBar
