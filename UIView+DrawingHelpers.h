@@ -25,6 +25,9 @@
 + (BOOL)isPortrait;                 // check using UIDevice
 + (BOOL)isPortraitFromStatusBar;    // check using UIApplication
 + (BOOL)isPortraitUpsideDownFromStatusBar;
++ (BOOL)isLandscapeFromStatusBar;
++ (BOOL)isLandscapeLeftFromStatusBar;
++ (BOOL)isLandscapeRightFromStatusBar;
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation;
 
 /** iPhone Sizes. **/

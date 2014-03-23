@@ -136,6 +136,32 @@
     return (orientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 
++ (BOOL)isLandscapeFromStatusBar
+{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight)
+    {
+        return YES;
+    }
+    
+    return NO;
+}
+
++ (BOOL)isLandscapeLeftFromStatusBar
+{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    return (orientation == UIInterfaceOrientationLandscapeLeft);
+}
+
++ (BOOL)isLandscapeRightFromStatusBar
+{
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    return (orientation == UIInterfaceOrientationLandscapeRight);
+}
+
 + (NSString *)stringFromOrientation:(UIInterfaceOrientation)orientation
 {
     if (orientation == UIInterfaceOrientationPortrait)
