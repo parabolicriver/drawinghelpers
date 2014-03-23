@@ -92,6 +92,16 @@
     return NO;
 }
 
++ (UIDeviceOrientation)deviceOrientation
+{
+    return [[UIDevice currentDevice] orientation];
+}
+
++ (UIInterfaceOrientation)interfaceOrientation
+{
+    return [[UIApplication sharedApplication] statusBarOrientation];
+}
+
 + (BOOL)isPortrait
 {
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];

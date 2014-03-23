@@ -147,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PAR;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Parabolic River";
 			};
 			buildConfigurationList = A070E02516C92604007B8F6D /* Build configuration list for PBXProject "PARDrawingHelpers" */;
@@ -239,6 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
