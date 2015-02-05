@@ -57,7 +57,7 @@
     if ([UIView isRetinaiPhone])
     {
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if (screenBounds.size.height == 480.0f || screenBounds.size.width == 320.0f)
+        if (screenBounds.size.height == 480.0f && screenBounds.size.width == 320.0f)
         {
             return YES;
         }
@@ -71,7 +71,7 @@
     if ([UIView isRetinaiPhone])
     {
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if (screenBounds.size.height == 568.0f || screenBounds.size.width == 320.0f)
+        if (screenBounds.size.height == 568.0f && screenBounds.size.width == 320.0f)
         {
             return YES;
         }
@@ -85,7 +85,7 @@
     if ([UIView isRetinaiPhone])
     {
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if (screenBounds.size.height == 667.0f || screenBounds.size.width == 375.0f)
+        if (screenBounds.size.height == 667.0f && screenBounds.size.width == 375.0f)
         {
             return YES;
         }
@@ -99,7 +99,7 @@
     if ([UIView isRetinaiPhone])
     {
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if (screenBounds.size.height == 736.0f || screenBounds.size.width == 414.0f)
+        if (screenBounds.size.height == 736.0f && screenBounds.size.width == 414.0f)
         {
             return YES;
         }
