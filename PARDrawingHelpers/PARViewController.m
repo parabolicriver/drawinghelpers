@@ -30,6 +30,7 @@
     if ([UIView isiPhone])
     {
         // iPhone device tests
+        NSLog(@"main screen bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
         NSLog(@"is iPhone 3_5 inch %d", [UIView isRetina3_5Inch]);
         NSLog(@"is iPhone 4 inch %d", [UIView isRetina4Inch]);
         NSLog(@"is iPhone 4_7 inch %d", [UIView isRetina4_7Inch]);
