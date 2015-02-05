@@ -47,6 +47,11 @@
         {
             return YES;
         }
+        // iPhone 6 plus renders @3x
+        else if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 3.00))
+        {
+            return YES;
+        }
     }
     
     return NO;
