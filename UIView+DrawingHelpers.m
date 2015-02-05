@@ -356,6 +356,36 @@
     }
 }
 
++ (CGSize)iPhoneScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
+}
+
++ (CGRect)iPhoneBounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
+}
+
++ (CGFloat)iPhoneRetina3_5Width:(BOOL)landscape
+{
+    return [UIView iPhoneWidth:landscape];
+}
+
++ (CGFloat)iPhoneRetina3_5Height:(BOOL)landscape
+{
+    return [UIView iPhoneHeight:landscape];
+}
+
++ (CGSize)iPhoneRetina3_5ScreenSize:(BOOL)landscape
+{
+    return [UIView iPhoneScreenSize:landscape];
+}
+
++ (CGRect)iPhoneRetina3_5Bounds:(BOOL)landscape
+{
+    return [UIView iPhoneBounds:landscape];
+}
+
 + (CGFloat)iPhoneRetina4Width:(BOOL)landscape
 {
     if (landscape)
@@ -380,24 +410,82 @@
     }
 }
 
-+ (CGSize)iPhoneScreenSize:(BOOL)landscape
-{
-    return CGSizeMake([UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
-}
-
 + (CGSize)iPhoneRetina4ScreenSize:(BOOL)landscape
 {
     return CGSizeMake([UIView iPhoneRetina4Width:landscape], [UIView iPhoneRetina4Height:landscape]);
 }
 
-+ (CGRect)iPhoneBounds:(BOOL)landscape
-{
-    return CGRectMake(0.0f, 0.0f, [UIView iPhoneWidth:landscape], [UIView iPhoneHeight:landscape]);
-}
-
 + (CGRect)iPhoneRetina4Bounds:(BOOL)landscape
 {
     return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina4Width:landscape], [UIView iPhoneRetina4Height:landscape]);
+}
+
++ (CGFloat)iPhoneRetina4_7Width:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 667.0f;
+    }
+    else
+    {
+        return 375.0f;
+    }
+}
+
++ (CGFloat)iPhoneRetina4_7Height:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 375.0f;
+    }
+    else
+    {
+        return 667.0f;
+    }
+}
+
++ (CGSize)iPhoneRetina4_7ScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPhoneRetina4_7Width:landscape], [UIView iPhoneRetina4_7Height:landscape]);
+}
+
++ (CGRect)iPhoneRetina4_7Bounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina4_7Width:landscape], [UIView iPhoneRetina4_7Height:landscape]);
+}
+
++ (CGFloat)iPhoneRetina5_5Width:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 736.0f;
+    }
+    else
+    {
+        return 414.0f;
+    }
+}
+
++ (CGFloat)iPhoneRetina5_5Height:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 414.0f;
+    }
+    else
+    {
+        return 736.0f;
+    }
+}
+
++ (CGSize)iPhoneRetina5_5ScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPhoneRetina5_5Width:landscape], [UIView iPhoneRetina5_5Height:landscape]);
+}
+
++ (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina5_5Width:landscape], [UIView iPhoneRetina5_5Height:landscape]);
 }
 
 + (CGFloat)iPhoneStatusBarHeight

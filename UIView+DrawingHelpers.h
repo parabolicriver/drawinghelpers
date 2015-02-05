@@ -48,15 +48,37 @@
 
 // All sizes in points.
 
+// older non-retina iPhones
 + (CGFloat)iPhoneWidth:(BOOL)landscape;
 + (CGFloat)iPhoneHeight:(BOOL)landscape;
++ (CGSize)iPhoneScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneBounds:(BOOL)landscape;
+
+// iPhone 4, 4S
++ (CGFloat)iPhoneRetina3_5Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina3_5Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina3_5ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina3_5Bounds:(BOOL)landscape;
+
+// iPhone 5, 5C, 5S
 + (CGFloat)iPhoneRetina4Width:(BOOL)landscape;
 + (CGFloat)iPhoneRetina4Height:(BOOL)landscape;
-+ (CGSize)iPhoneScreenSize:(BOOL)landscape;
 + (CGSize)iPhoneRetina4ScreenSize:(BOOL)landscape;
-+ (CGRect)iPhoneBounds:(BOOL)landscape;
 + (CGRect)iPhoneRetina4Bounds:(BOOL)landscape;
 
+// iPhone 6
++ (CGFloat)iPhoneRetina4_7Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina4_7Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina4_7ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina4_7Bounds:(BOOL)landscape;
+
+// iPhone 6 Plus
++ (CGFloat)iPhoneRetina5_5Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina5_5Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina5_5ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape;
+
+// ui kit elements depending on iPhone
 + (CGFloat)iPhoneStatusBarHeight;
 + (CGFloat)iPhoneNavigationBarHeight:(BOOL)landscape;
 + (CGFloat)iPhoneToolbarHeight;
