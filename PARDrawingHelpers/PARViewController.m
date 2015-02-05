@@ -25,7 +25,10 @@
     {
         BOOL isPortrait = [UIView isPortrait];
         NSLog(@"view bounds %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
-        
+    }
+    
+    if ([UIView isiPhone])
+    {
         // iPhone device tests
         NSLog(@"is iPhone 3_5 inch %d", [UIView isRetina3_5Inch]);
         NSLog(@"is iPhone 4 inch %d", [UIView isRetina4Inch]);
