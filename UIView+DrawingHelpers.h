@@ -79,6 +79,8 @@
 + (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape;
 
 // ui kit elements depending on iPhone
+// (iOS 8 and iPhone 6 onwards please use
+// the iOS 8 methods)
 + (CGFloat)iPhoneStatusBarHeight;
 + (CGFloat)iPhoneNavigationBarHeight:(BOOL)landscape;
 + (CGFloat)iPhoneToolbarHeight;
