@@ -52,17 +52,59 @@
     return NO;
 }
 
-+ (BOOL)isRetina4Inch
++ (BOOL)isRetina3_5Inch
 {
-    if ([UIView isiPhone])
+    if ([UIView isRetinaiPhone])
     {
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if (screenBounds.size.height == 568.0f || screenBounds.size.width == 568.0f)
+        if (screenBounds.size.height == 480.0f || screenBounds.size.width == 320.0f)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isRetina4Inch
+{
+    if ([UIView isRetinaiPhone])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if (screenBounds.size.height == 568.0f || screenBounds.size.width == 320.0f)
         {
             return YES;
         }
     }
 
+    return NO;
+}
+
++ (BOOL)isRetina4_7Inch
+{
+    if ([UIView isRetinaiPhone])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if (screenBounds.size.height == 667.0f || screenBounds.size.width == 375.0f)
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isRetina5_5Inch
+{
+    if ([UIView isRetinaiPhone])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if (screenBounds.size.height == 736.0f || screenBounds.size.width == 414.0f)
+        {
+            return YES;
+        }
+    }
+    
     return NO;
 }
 

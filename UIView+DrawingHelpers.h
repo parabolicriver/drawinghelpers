@@ -17,9 +17,12 @@
 
 /** Screen properties. **/
 
-+ (BOOL)isiPhone;
-+ (BOOL)isRetinaiPhone;
-+ (BOOL)isRetina4Inch;
++ (BOOL)isiPhone;                   // any iPhone
++ (BOOL)isRetinaiPhone;             // any retina iPhone
++ (BOOL)isRetina3_5Inch;            // iPhone 4, 4S
++ (BOOL)isRetina4Inch;              // iPhone 5, 5C, 5S
++ (BOOL)isRetina4_7Inch;            // iPhone 6
++ (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (UIDeviceOrientation)deviceOrientation;
