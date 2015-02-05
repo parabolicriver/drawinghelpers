@@ -101,6 +101,9 @@
 /*
  * Note:
  * Tested with English default keyboards only.
+ *
+ * On iOS 8 and iPhone 6 onwards please use the
+ * iOS 8 methods.
  */
 
 // Always return the correct value in the height, i.e
