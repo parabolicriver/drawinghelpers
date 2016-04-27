@@ -36,6 +36,9 @@
         NSLog(@"is iPhone 4_7 inch %d", [UIView isRetina4_7Inch]);
         NSLog(@"is iPhone 5_5 inch %d", [UIView isRetina5_5Inch]);
     }
+    
+    // test os versions
+    NSLog(@"iOS 7> - %d, iOS 8> - %d, iOS 9> - %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater]);
 }
 
 - (void)didReceiveMemoryWarning

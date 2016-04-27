@@ -24,6 +24,18 @@
     }
 }
 
++ (BOOL)iOS8AndLater
+{
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return version.majorVersion >= 8;
+}
+
++ (BOOL)iOS9AndLater
+{
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return version.majorVersion >= 9;
+}
+
 #pragma mark - Screen Properties
 
 + (BOOL)isiPhone
