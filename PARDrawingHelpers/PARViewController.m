@@ -38,7 +38,7 @@
     }
     
     // test os versions
-    NSLog(@"iOS 7> - %d, iOS 8> - %d, iOS 9> - %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater]);
+    NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater]);
 }
 
 - (void)didReceiveMemoryWarning

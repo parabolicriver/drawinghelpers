@@ -16,6 +16,7 @@
 + (BOOL)iOS7AndLater;               // will return NO for iOS 6 etc.
 + (BOOL)iOS8AndLater;               // please only use when you're sorta sure the deployment target is not below 8
 + (BOOL)iOS9AndLater;
++ (BOOL)iOS10AndLater;
 
 /** Screen properties. **/
 
