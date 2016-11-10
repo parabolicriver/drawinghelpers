@@ -96,6 +96,10 @@
 + (CGFloat)iPadHeight:(BOOL)landscape;
 + (CGSize)iPadScreenSize:(BOOL)landscape;
 + (CGRect)iPadBounds:(BOOL)landscape;
++ (CGFloat)iPadPro12_9Width:(BOOL)landscape;
++ (CGFloat)iPadPro12_9Height:(BOOL)landscape;
++ (CGSize)iPadPro12_9ScreenSize:(BOOL)landscape;
++ (CGRect)iPadPro12_9Bounds:(BOOL)landscape;
 
 + (CGFloat)iPadStatusBarHeight;
 + (CGFloat)iPadNavigationBarHeight;

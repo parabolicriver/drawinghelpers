@@ -29,6 +29,14 @@
         if ([UIView isiPadPro12_9])
         {
             NSLog(@"ipad pro 12.9 window bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
+            if ([UIView isPortraitFromStatusBar])
+            {
+                NSLog(@"ipad pro 12.9 ideal bounds %@", NSStringFromCGRect([UIView iPadPro12_9Bounds:NO]));
+            }
+            else
+            {
+                NSLog(@"ipad pro 12.9 ideal bounds %@", NSStringFromCGRect([UIView iPadPro12_9Bounds:YES]));
+            }
         }
     }
     

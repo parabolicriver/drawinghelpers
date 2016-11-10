@@ -588,6 +588,40 @@
     return CGRectMake(0.0f, 0.0f, [UIView iPadWidth:landscape], [UIView iPadHeight:landscape]);
 }
 
++ (CGFloat)iPadPro12_9Width:(BOOL)landscape
+{
+    if (!landscape)
+    {
+        return 1024.0f;
+    }
+    else
+    {
+        return 1366.0f;
+    }
+}
+
++ (CGFloat)iPadPro12_9Height:(BOOL)landscape
+{
+    if (!landscape)
+    {
+        return 1366.0f;
+    }
+    else
+    {
+        return 1024.0f;
+    }
+}
+
++ (CGSize)iPadPro12_9ScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPadPro12_9Width:landscape], [UIView iPadPro12_9Height:landscape]);
+}
+
++ (CGRect)iPadPro12_9Bounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPadPro12_9Width:landscape], [UIView iPadPro12_9Height:landscape]);
+}
+
 + (CGFloat)iPadStatusBarHeight
 {
     return 20.0f;
