@@ -28,7 +28,7 @@
         
         if ([UIView isiPadPro12_9])
         {
-            NSLog(@"ipad pro 12.9 view frame %@", NSStringFromCGRect(self.view.bounds));            
+            NSLog(@"ipad pro 12.9 window bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
         }
     }
     
