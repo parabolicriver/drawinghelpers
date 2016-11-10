@@ -25,6 +25,11 @@
     {
         BOOL isPortrait = [UIView isPortrait];
         NSLog(@"view bounds %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
+        
+        if ([UIView isiPadPro12_9])
+        {
+            NSLog(@"ipad pro 12.9 view frame %@", NSStringFromCGRect(self.view.bounds));            
+        }
     }
     
     if ([UIView isiPhone])

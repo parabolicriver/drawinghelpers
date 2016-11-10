@@ -161,21 +161,6 @@
     return NO;
 }
 
-+ (BOOL)isiPadPro9_7
-{
-    if ([UIView isiPad])
-    {
-        CGRect screenBounds = [[UIScreen mainScreen] bounds];
-        if ((screenBounds.size.height == 1024.0f && screenBounds.size.width == 768.0f) ||
-            (screenBounds.size.height == 768.0f && screenBounds.size.width == 1024.0f))
-        {
-            return YES;
-        }
-    }
-    
-    return NO;
-}
-
 + (BOOL)isiPadPro12_9
 {
     if ([UIView isiPad])
@@ -189,11 +174,6 @@
     }
     
     return NO;
-}
-
-+ (BOOL)isiPadPro
-{
-    return [UIView isiPadPro9_7] || [UIView isiPadPro12_9];
 }
 
 + (UIDeviceOrientation)deviceOrientation

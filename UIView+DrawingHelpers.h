@@ -28,9 +28,7 @@
 + (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
-+ (BOOL)isiPadPro9_7;
 + (BOOL)isiPadPro12_9;
-+ (BOOL)isiPadPro;
 + (UIDeviceOrientation)deviceOrientation;
 + (UIInterfaceOrientation)interfaceOrientation;
 + (BOOL)isPortrait;                 // check using UIDevice, device orientation checks
