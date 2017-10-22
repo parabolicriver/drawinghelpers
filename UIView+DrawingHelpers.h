@@ -27,6 +27,7 @@
 + (BOOL)isRetina4Inch;              // iPhone 5, 5C, 5S
 + (BOOL)isRetina4_7Inch;            // iPhone 6
 + (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
++ (BOOL)isRetina5_8Inch;            // iPhone X
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;

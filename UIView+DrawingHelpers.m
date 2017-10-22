@@ -71,7 +71,7 @@
         {
             return YES;
         }
-        // iPhone 6 plus renders @3x
+        // iPhone 6 Plus and iPhone X are @3x
         else if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 3.00))
         {
             return YES;
@@ -133,6 +133,21 @@
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
         if ((screenBounds.size.height == 736.0f && screenBounds.size.width == 414.0f) ||
             (screenBounds.size.height == 414.0f && screenBounds.size.width == 736.0f))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isRetina5_8Inch
+{
+    if ([UIView isRetinaiPhone])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == 812.0f && screenBounds.size.width == 375.0f) ||
+            (screenBounds.size.height == 375.0f && screenBounds.size.width == 812.0f))
         {
             return YES;
         }
