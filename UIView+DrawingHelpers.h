@@ -84,6 +84,12 @@
 + (CGSize)iPhoneRetina5_5ScreenSize:(BOOL)landscape;
 + (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape;
 
+// iPhone X
++ (CGFloat)iPhoneRetina5_8Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina5_8Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina5_8ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina5_8Bounds:(BOOL)landscape;
+
 // ui kit elements depending on iPhone
 // (iOS 8 and iPhone 6 onwards please use
 // the iOS 8 methods)
