@@ -42,6 +42,12 @@
     return version.majorVersion >= 10;
 }
 
++ (BOOL)iOS11AndLater
+{
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return version.majorVersion >= 11;
+}
+
 #pragma mark - Screen Properties
 
 + (BOOL)isiPhone
@@ -65,7 +71,7 @@
         {
             return YES;
         }
-        // iPhone 6 plus renders @3x
+        // iPhone 6 Plus and iPhone X are @3x
         else if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 3.00))
         {
             return YES;
@@ -127,6 +133,21 @@
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
         if ((screenBounds.size.height == 736.0f && screenBounds.size.width == 414.0f) ||
             (screenBounds.size.height == 414.0f && screenBounds.size.width == 736.0f))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isRetina5_8Inch
+{
+    if ([UIView isRetinaiPhone])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == 812.0f && screenBounds.size.width == 375.0f) ||
+            (screenBounds.size.height == 375.0f && screenBounds.size.width == 812.0f))
         {
             return YES;
         }
@@ -523,6 +544,40 @@
 + (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape
 {
     return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina5_5Width:landscape], [UIView iPhoneRetina5_5Height:landscape]);
+}
+
++ (CGFloat)iPhoneRetina5_8Width:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 812.0f;
+    }
+    else
+    {
+        return 375.0f;
+    }
+}
+
++ (CGFloat)iPhoneRetina5_8Height:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 375.0f;
+    }
+    else
+    {
+        return 812.0f;
+    }
+}
+
++ (CGSize)iPhoneRetina5_8ScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPhoneRetina5_8Width:landscape], [UIView iPhoneRetina5_8Height:landscape]);
+}
+
++ (CGRect)iPhoneRetina5_8Bounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina5_8Width:landscape], [UIView iPhoneRetina5_8Height:landscape]);
 }
 
 + (CGFloat)iPhoneStatusBarHeight

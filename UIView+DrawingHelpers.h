@@ -17,6 +17,7 @@
 + (BOOL)iOS8AndLater;               // please only use when you're sorta sure the deployment target is not below 8
 + (BOOL)iOS9AndLater;
 + (BOOL)iOS10AndLater;
++ (BOOL)iOS11AndLater;
 
 /** Screen properties. **/
 
@@ -26,6 +27,7 @@
 + (BOOL)isRetina4Inch;              // iPhone 5, 5C, 5S
 + (BOOL)isRetina4_7Inch;            // iPhone 6
 + (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
++ (BOOL)isRetina5_8Inch;            // iPhone X
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;
@@ -81,6 +83,12 @@
 + (CGFloat)iPhoneRetina5_5Height:(BOOL)landscape;
 + (CGSize)iPhoneRetina5_5ScreenSize:(BOOL)landscape;
 + (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape;
+
+// iPhone X
++ (CGFloat)iPhoneRetina5_8Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina5_8Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina5_8ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina5_8Bounds:(BOOL)landscape;
 
 // ui kit elements depending on iPhone
 // (iOS 8 and iPhone 6 onwards please use
