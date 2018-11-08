@@ -24,7 +24,7 @@
     if (isiPad)
     {
         BOOL isPortrait = [UIView isPortrait];
-        NSLog(@"view bounds %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
+        NSLog(@"test view bounds for iPad %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
         
         if ([UIView isiPadPro12_9])
         {
