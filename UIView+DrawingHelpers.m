@@ -48,6 +48,12 @@
     return version.majorVersion >= 11;
 }
 
++ (BOOL)iOS12AndLater
+{
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return version.majorVersion >= 12;
+}
+
 #pragma mark - Screen Properties
 
 + (BOOL)isiPhone
@@ -156,6 +162,54 @@
     return NO;
 }
 
+// Scale 2.0.
++ (BOOL)isRetina6_1Inch
+{
+    BOOL isScale2 = NO;
+    BOOL widthAndHeightMatch = NO;
+    
+    if ([UIView isRetinaiPhone])
+    {        
+        if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00))
+        {
+            isScale2 = YES;
+        }
+        
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == 896.0f && screenBounds.size.width == 414.0f) ||
+            (screenBounds.size.height == 414.0f && screenBounds.size.width == 896.0f))
+        {
+            widthAndHeightMatch = YES;
+        }
+    }
+    
+    return (isScale2 && widthAndHeightMatch);
+}
+
+// Scale 3.0.
++ (BOOL)isRetina6_5Inch
+{
+    BOOL isScale3 = NO;
+    BOOL widthAndHeightMatch = NO;
+    
+    if ([UIView isRetinaiPhone])
+    {
+        if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 3.00))
+        {
+            isScale3 = YES;
+        }
+        
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == 896.0f && screenBounds.size.width == 414.0f) ||
+            (screenBounds.size.height == 414.0f && screenBounds.size.width == 896.0f))
+        {
+            widthAndHeightMatch = YES;
+        }
+    }
+    
+    return (isScale3 && widthAndHeightMatch);
+}
+
 + (BOOL)isiPad
 {
     UIDevice *device = [UIDevice currentDevice];
@@ -189,6 +243,36 @@
         CGRect screenBounds = [[UIScreen mainScreen] bounds];
         if ((screenBounds.size.height == 1366.0f && screenBounds.size.width == 1024.0f) ||
             (screenBounds.size.height == 1024.0f && screenBounds.size.width == 1366.0f))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isiPadPro10_5
+{
+    if ([UIView isiPad])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == (2224.0f / 2) && screenBounds.size.width == (1668.0f / 2)) ||
+            (screenBounds.size.height == (1668.0f / 2) && screenBounds.size.width == (2224.0f / 2)))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isiPadPro11
+{
+    if ([UIView isiPad])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == (2388.0f / 2) && screenBounds.size.width == (1668.0f / 2)) ||
+            (screenBounds.size.height == (1668.0f / 2) && screenBounds.size.width == (2388.0f / 2)))
         {
             return YES;
         }

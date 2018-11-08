@@ -18,6 +18,7 @@
 + (BOOL)iOS9AndLater;
 + (BOOL)iOS10AndLater;
 + (BOOL)iOS11AndLater;
++ (BOOL)iOS12AndLater;
 
 /** Screen properties. **/
 
@@ -27,10 +28,14 @@
 + (BOOL)isRetina4Inch;              // iPhone 5, 5C, 5S
 + (BOOL)isRetina4_7Inch;            // iPhone 6
 + (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
-+ (BOOL)isRetina5_8Inch;            // iPhone X
++ (BOOL)isRetina5_8Inch;            // iPhone X and XS
++ (BOOL)isRetina6_1Inch;            // iPhone XR
++ (BOOL)isRetina6_5Inch;            // iPhone XS Max
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;
++ (BOOL)isiPadPro10_5;
++ (BOOL)isiPadPro11;
 + (UIDeviceOrientation)deviceOrientation;
 + (UIInterfaceOrientation)interfaceOrientation;
 + (BOOL)isPortrait;                 // check using UIDevice, device orientation checks
@@ -51,6 +56,9 @@
 + (UIInterfaceOrientation)interfaceOrientationFromDeviceOrientation:(UIDeviceOrientation)deviceOrientation;
 
 /** iPhone Sizes. **/
+
+// Note:
+// Last updated for iOS 11 and iPhone X only.
 
 // All sizes in points.
 
@@ -99,6 +107,9 @@
 + (CGFloat)iPhoneTabBarHeight;
 
 /** iPad Sizes. **/
+
+// Note:
+// Last updated for iPad Pro 12.9 first generation only.
 
 + (CGFloat)iPadWidth:(BOOL)landscape;
 + (CGFloat)iPadHeight:(BOOL)landscape;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28404C55219433F000AF1641 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28404C54219433F000AF1641 /* Images.xcassets */; };
 		A070E03016C92604007B8F6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E02F16C92604007B8F6D /* UIKit.framework */; };
 		A070E03216C92604007B8F6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03116C92604007B8F6D /* Foundation.framework */; };
 		A070E03416C92604007B8F6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03316C92604007B8F6D /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28404C54219433F000AF1641 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A070E02B16C92604007B8F6D /* PARDrawingHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PARDrawingHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A070E02F16C92604007B8F6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A070E03116C92604007B8F6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +94,7 @@
 				A070E04716C92604007B8F6D /* PARViewController.h */,
 				A070E04816C92604007B8F6D /* PARViewController.m */,
 				A070E04A16C92604007B8F6D /* PARViewController.xib */,
+				28404C54219433F000AF1641 /* Images.xcassets */,
 				A070E03616C92604007B8F6D /* Supporting Files */,
 			);
 			path = PARDrawingHelpers;
@@ -147,7 +150,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PAR;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Parabolic River";
 			};
 			buildConfigurationList = A070E02516C92604007B8F6D /* Build configuration list for PBXProject "PARDrawingHelpers" */;
@@ -175,6 +178,7 @@
 				A070E03A16C92604007B8F6D /* InfoPlist.strings in Resources */,
 				A070E04216C92604007B8F6D /* Default.png in Resources */,
 				A070E04416C92604007B8F6D /* Default@2x.png in Resources */,
+				28404C55219433F000AF1641 /* Images.xcassets in Resources */,
 				A070E04616C92604007B8F6D /* Default-568h@2x.png in Resources */,
 				A070E04C16C92604007B8F6D /* PARViewController.xib in Resources */,
 			);
@@ -227,11 +231,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -275,11 +281,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -308,6 +316,7 @@
 		A070E05016C92604007B8F6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
 				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";
@@ -322,6 +331,7 @@
 		A070E05116C92604007B8F6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
 				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";

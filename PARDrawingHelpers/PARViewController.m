@@ -24,7 +24,7 @@
     if (isiPad)
     {
         BOOL isPortrait = [UIView isPortrait];
-        NSLog(@"view bounds %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
+        NSLog(@"test view bounds for iPad %@.", NSStringFromCGRect([UIView iPadBounds:!isPortrait]));
         
         if ([UIView isiPadPro12_9])
         {
@@ -38,6 +38,9 @@
                 NSLog(@"ipad pro 12.9 ideal bounds %@", NSStringFromCGRect([UIView iPadPro12_9Bounds:YES]));
             }
         }
+        NSLog(@"is iPad Pro 12.9 inch %d", [UIView isiPadPro12_9]);
+        NSLog(@"is iPad Pro 10.5 inch %d", [UIView isiPadPro10_5]);
+        NSLog(@"is iPad Pro 11 inch %d", [UIView isiPadPro11]);
     }
     
     if ([UIView isiPhone])
@@ -50,15 +53,17 @@
         NSLog(@"main screen bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
         
         // iPhone device tests
-        NSLog(@"is iPhone 3_5 inch %d", [UIView isRetina3_5Inch]);
+        NSLog(@"is iPhone 3.5 inch %d", [UIView isRetina3_5Inch]);
         NSLog(@"is iPhone 4 inch %d", [UIView isRetina4Inch]);
-        NSLog(@"is iPhone 4_7 inch %d", [UIView isRetina4_7Inch]);
-        NSLog(@"is iPhone 5_5 inch %d", [UIView isRetina5_5Inch]);
-        NSLog(@"is iPhone 5_8 inch %d", [UIView isRetina5_8Inch]);
+        NSLog(@"is iPhone 4.7 inch %d", [UIView isRetina4_7Inch]);
+        NSLog(@"is iPhone 5.5 inch %d", [UIView isRetina5_5Inch]);
+        NSLog(@"is iPhone 5.8 inch %d", [UIView isRetina5_8Inch]);
+        NSLog(@"is iPhone 6.1 inch %d", [UIView isRetina6_1Inch]);
+        NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);
     }
     
     // test os versions
-    NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater]);
+    NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d, iOS 12> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater], [UIView iOS12AndLater]);
 }
 
 - (void)didReceiveMemoryWarning
