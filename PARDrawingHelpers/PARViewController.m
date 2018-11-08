@@ -53,13 +53,13 @@
         NSLog(@"main screen bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
         
         // iPhone device tests
-        NSLog(@"is iPhone 3_5 inch %d", [UIView isRetina3_5Inch]);
+        NSLog(@"is iPhone 3.5 inch %d", [UIView isRetina3_5Inch]);
         NSLog(@"is iPhone 4 inch %d", [UIView isRetina4Inch]);
-        NSLog(@"is iPhone 4_7 inch %d", [UIView isRetina4_7Inch]);
-        NSLog(@"is iPhone 5_5 inch %d", [UIView isRetina5_5Inch]);
-        NSLog(@"is iPhone 5_8 inch %d", [UIView isRetina5_8Inch]);
-        NSLog(@"is iPhone 6_1 inch %d", [UIView isRetina6_1Inch]);
-        NSLog(@"is iPhone 6_5 inch %d", [UIView isRetina6_5Inch]);
+        NSLog(@"is iPhone 4.7 inch %d", [UIView isRetina4_7Inch]);
+        NSLog(@"is iPhone 5.5 inch %d", [UIView isRetina5_5Inch]);
+        NSLog(@"is iPhone 5.8 inch %d", [UIView isRetina5_8Inch]);
+        NSLog(@"is iPhone 6.1 inch %d", [UIView isRetina6_1Inch]);
+        NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);
     }
     
     // test os versions
