@@ -169,8 +169,7 @@
     BOOL widthAndHeightMatch = NO;
     
     if ([UIView isRetinaiPhone])
-    {
-        
+    {        
         if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 2.00))
         {
             isScale2 = YES;
@@ -195,7 +194,6 @@
     
     if ([UIView isRetinaiPhone])
     {
-        
         if (([[UIScreen mainScreen] respondsToSelector:@selector(scale)] == YES && [[UIScreen mainScreen] scale] == 3.00))
         {
             isScale3 = YES;
