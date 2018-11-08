@@ -38,6 +38,9 @@
                 NSLog(@"ipad pro 12.9 ideal bounds %@", NSStringFromCGRect([UIView iPadPro12_9Bounds:YES]));
             }
         }
+        NSLog(@"is iPad Pro 12.9 inch %d", [UIView isiPadPro12_9]);
+        NSLog(@"is iPad Pro 10.5 inch %d", [UIView isiPadPro10_5]);
+        NSLog(@"is iPad Pro 11 inch %d", [UIView isiPadPro11]);
     }
     
     if ([UIView isiPhone])

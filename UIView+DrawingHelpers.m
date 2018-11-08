@@ -251,6 +251,36 @@
     return NO;
 }
 
++ (BOOL)isiPadPro10_5
+{
+    if ([UIView isiPad])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == (2224.0f / 2) && screenBounds.size.width == (1668.0f / 2)) ||
+            (screenBounds.size.height == (1668.0f / 2) && screenBounds.size.width == (2224.0f / 2)))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
++ (BOOL)isiPadPro11
+{
+    if ([UIView isiPad])
+    {
+        CGRect screenBounds = [[UIScreen mainScreen] bounds];
+        if ((screenBounds.size.height == (2388.0f / 2) && screenBounds.size.width == (1668.0f / 2)) ||
+            (screenBounds.size.height == (1668.0f / 2) && screenBounds.size.width == (2388.0f / 2)))
+        {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
+
 + (UIDeviceOrientation)deviceOrientation
 {
     return [[UIDevice currentDevice] orientation];

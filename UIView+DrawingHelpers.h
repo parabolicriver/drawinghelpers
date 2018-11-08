@@ -34,6 +34,8 @@
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;
++ (BOOL)isiPadPro10_5;
++ (BOOL)isiPadPro11;
 + (UIDeviceOrientation)deviceOrientation;
 + (UIInterfaceOrientation)interfaceOrientation;
 + (BOOL)isPortrait;                 // check using UIDevice, device orientation checks
