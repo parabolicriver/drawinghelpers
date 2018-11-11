@@ -664,6 +664,40 @@
     return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina5_8Width:landscape], [UIView iPhoneRetina5_8Height:landscape]);
 }
 
++ (CGFloat)iPhoneRetina6_1And6_5Width:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 896.0f;
+    }
+    else
+    {
+        return 414.0f;
+    }
+}
+
++ (CGFloat)iPhoneRetina6_1And6_5Height:(BOOL)landscape
+{
+    if (landscape)
+    {
+        return 414.0f;
+    }
+    else
+    {
+        return 896.0f;
+    }
+}
+
++ (CGSize)iPhoneRetina6_1And6_5ScreenSize:(BOOL)landscape
+{
+    return CGSizeMake([UIView iPhoneRetina6_1And6_5Width:landscape], [UIView iPhoneRetina6_1And6_5Height:landscape]);
+}
+
++ (CGRect)iPhoneRetina6_1And6_5Bounds:(BOOL)landscape
+{
+    return CGRectMake(0.0f, 0.0f, [UIView iPhoneRetina6_1And6_5Width:landscape], [UIView iPhoneRetina6_1And6_5Height:landscape]);
+}
+
 + (CGFloat)iPhoneStatusBarHeight
 {
     return 20.0f;
