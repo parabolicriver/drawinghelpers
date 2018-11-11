@@ -57,9 +57,6 @@
 
 /** iPhone Sizes. **/
 
-// Note:
-// Last updated for iOS 11 and iPhone X only.
-
 // All sizes in points.
 
 // older non-retina iPhones
@@ -92,11 +89,17 @@
 + (CGSize)iPhoneRetina5_5ScreenSize:(BOOL)landscape;
 + (CGRect)iPhoneRetina5_5Bounds:(BOOL)landscape;
 
-// iPhone X
+// iPhone X and XS
 + (CGFloat)iPhoneRetina5_8Width:(BOOL)landscape;
 + (CGFloat)iPhoneRetina5_8Height:(BOOL)landscape;
 + (CGSize)iPhoneRetina5_8ScreenSize:(BOOL)landscape;
 + (CGRect)iPhoneRetina5_8Bounds:(BOOL)landscape;
+
+// iPhone XR and XS Max (same size in points)
++ (CGFloat)iPhoneRetina6_1And6_5Width:(BOOL)landscape;
++ (CGFloat)iPhoneRetina6_1And6_5Height:(BOOL)landscape;
++ (CGSize)iPhoneRetina6_1And6_5ScreenSize:(BOOL)landscape;
++ (CGRect)iPhoneRetina6_1And6_5Bounds:(BOOL)landscape;
 
 // ui kit elements depending on iPhone
 // (iOS 8 and iPhone 6 onwards please use
