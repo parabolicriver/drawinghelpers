@@ -19,18 +19,19 @@
 + (BOOL)iOS10AndLater;
 + (BOOL)iOS11AndLater;
 + (BOOL)iOS12AndLater;
++ (BOOL)iOS13AndLater;
 
 /** Screen properties. **/
 
 + (BOOL)isiPhone;                   // any iPhone
 + (BOOL)isRetinaiPhone;             // any retina iPhone
 + (BOOL)isRetina3_5Inch;            // iPhone 4, 4S
-+ (BOOL)isRetina4Inch;              // iPhone 5, 5C, 5S
-+ (BOOL)isRetina4_7Inch;            // iPhone 6
-+ (BOOL)isRetina5_5Inch;            // iPhone 6 Plus
-+ (BOOL)isRetina5_8Inch;            // iPhone X and XS
-+ (BOOL)isRetina6_1Inch;            // iPhone XR
-+ (BOOL)isRetina6_5Inch;            // iPhone XS Max
++ (BOOL)isRetina4Inch;              // iPhone 5, 5c, 5s and SE
++ (BOOL)isRetina4_7Inch;            // iPhone 6, 6s, 7 and 8
++ (BOOL)isRetina5_5Inch;            // iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus
++ (BOOL)isRetina5_8Inch;            // iPhone X, XS and 11 Pro
++ (BOOL)isRetina6_1Inch;            // iPhone XR, 11
++ (BOOL)isRetina6_5Inch;            // iPhone XS Max, 11 Pro Max
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;
