@@ -54,6 +54,12 @@
     return version.majorVersion >= 12;
 }
 
++ (BOOL)iOS13AndLater
+{
+    NSOperatingSystemVersion version = [[NSProcessInfo processInfo] operatingSystemVersion];
+    return version.majorVersion >= 13;
+}
+
 #pragma mark - Screen Properties
 
 + (BOOL)isiPhone

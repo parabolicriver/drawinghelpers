@@ -19,6 +19,7 @@
 + (BOOL)iOS10AndLater;
 + (BOOL)iOS11AndLater;
 + (BOOL)iOS12AndLater;
++ (BOOL)iOS13AndLater;
 
 /** Screen properties. **/
 
