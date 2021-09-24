@@ -28,5 +28,28 @@ import UIKit
         
         return false;
     }
+    
+    /** iPhones **/
+    
+    // iPhone 12 mini, 13 mini
+    
+    static let iPhoneRetina5_42Width = 375;
+    static let iPhoneRetina5_42Height = 812;
+    
+    class func isRetina5_42Inch() -> Bool {
+        return false;
+    }
+    
+    // iPhone 12, 12 Pro, 13, 13 Pro
+    
+    class func isRetina6_06Inch() -> Bool {
+        return false;
+    }
+    
+    // iPhone 12 Pro Max, 13 Pro Max
+    
+    class func isRetina6_68Inch() -> Bool {
+        return false;
+    }
 }
 
