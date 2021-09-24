@@ -7,3 +7,26 @@
 //
 
 import Foundation
+import UIKit
+
+extension UIView {
+    
+    /** iOS versions **/
+    
+    func iOS14AndLater() -> Bool {
+        if let iOSVersion = Float(UIDevice.current.systemVersion) {
+            return iOSVersion >= 14.0
+        }
+        
+        return false;
+    }
+    
+    func iOS15AndLater() -> Bool {
+        if let iOSVersion = Float(UIDevice.current.systemVersion) {
+            return iOSVersion >= 15.0
+        }
+        
+        return false;
+    }
+}
+
