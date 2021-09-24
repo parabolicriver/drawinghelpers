@@ -60,6 +60,9 @@
         NSLog(@"is iPhone 5.8 inch %d", [UIView isRetina5_8Inch]);
         NSLog(@"is iPhone 6.1 inch %d", [UIView isRetina6_1Inch]);
         NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);
+        
+        // getting confused with scale
+        NSLog(@"main scale is %f", [[UIScreen mainScreen] scale]);
     }
     
     // test os versions
