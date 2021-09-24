@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28404C55219433F000AF1641 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28404C54219433F000AF1641 /* Images.xcassets */; };
+		28A9C78A26FD887200C49F47 /* UIViewDrawingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A9C78926FD887200C49F47 /* UIViewDrawingHelpers.swift */; };
 		A070E03016C92604007B8F6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E02F16C92604007B8F6D /* UIKit.framework */; };
 		A070E03216C92604007B8F6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03116C92604007B8F6D /* Foundation.framework */; };
 		A070E03416C92604007B8F6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A070E03316C92604007B8F6D /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		28404C54219433F000AF1641 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28A9C78826FD887200C49F47 /* PARDrawingHelpers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PARDrawingHelpers-Bridging-Header.h"; sourceTree = "<group>"; };
+		28A9C78926FD887200C49F47 /* UIViewDrawingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewDrawingHelpers.swift; sourceTree = "<group>"; };
 		A070E02B16C92604007B8F6D /* PARDrawingHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PARDrawingHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A070E02F16C92604007B8F6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A070E03116C92604007B8F6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 			children = (
 				A070E05616C9271D007B8F6D /* UIView+DrawingHelpers.h */,
 				A070E05716C9271D007B8F6D /* UIView+DrawingHelpers.m */,
+				28A9C78926FD887200C49F47 /* UIViewDrawingHelpers.swift */,
+				28A9C78826FD887200C49F47 /* PARDrawingHelpers-Bridging-Header.h */,
 			);
 			name = "View Drawing";
 			sourceTree = "<group>";
@@ -152,12 +157,18 @@
 				CLASSPREFIX = PAR;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Parabolic River";
+				TargetAttributes = {
+					A070E02A16C92604007B8F6D = {
+						LastSwiftMigration = 1300;
+					};
+				};
 			};
 			buildConfigurationList = A070E02516C92604007B8F6D /* Build configuration list for PBXProject "PARDrawingHelpers" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = A070E02016C92604007B8F6D;
@@ -195,6 +206,7 @@
 				A070E04016C92604007B8F6D /* PARAppDelegate.m in Sources */,
 				A070E04916C92604007B8F6D /* PARViewController.m in Sources */,
 				A070E05816C9271D007B8F6D /* UIView+DrawingHelpers.m in Sources */,
+				28A9C78A26FD887200C49F47 /* UIViewDrawingHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +329,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
 				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parabolicriver.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PARDrawingHelpers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -332,12 +349,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PARDrawingHelpers/PARDrawingHelpers-Prefix.pch";
 				INFOPLIST_FILE = "PARDrawingHelpers/PARDrawingHelpers-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.parabolicriver.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PARDrawingHelpers-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
