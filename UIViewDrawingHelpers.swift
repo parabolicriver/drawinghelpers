@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-extension UIView {
+@objc extension UIView {
     
     /** iOS versions **/
     
-    func iOS14AndLater() -> Bool {
+    class func iOS14AndLater() -> Bool {
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
             return iOSVersion >= 14.0
         }
@@ -21,7 +21,7 @@ extension UIView {
         return false;
     }
     
-    func iOS15AndLater() -> Bool {
+    class func iOS15AndLater() -> Bool {
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
             return iOSVersion >= 15.0
         }
