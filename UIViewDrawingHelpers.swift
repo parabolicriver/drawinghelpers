@@ -35,31 +35,38 @@ import UIKit
         var isScale3 = false
         var widthAndHeightMatch = false
         
-        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina5_42Height && screenBounds.size.width == kiPhoneRetina5_42Width) ||
+                (screenBounds.size.height == kiPhoneRetina5_42Width && screenBounds.size.width == kiPhoneRetina5_42Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
         
         return isScale3 && widthAndHeightMatch;
     }
     
     // iPhone 12 mini, 13 mini
     
-    fileprivate static let iPhoneRetina5_42Width = 375.0
-    fileprivate static let iPhoneRetina5_42Height = 812.0
+    fileprivate static let kiPhoneRetina5_42Width = 375.0
+    fileprivate static let kiPhoneRetina5_42Height = 812.0
     
     class func iPhoneRetina5_42Width(landscape: Bool) -> CGFloat {
         if (landscape) {
-            return iPhoneRetina5_42Height
+            return kiPhoneRetina5_42Height
         } else {
-            return iPhoneRetina5_42Width
+            return kiPhoneRetina5_42Width
         }
     }
     
     class func iPhoneRetina5_42Height(landscape: Bool) -> CGFloat {
         if (landscape) {
-            return iPhoneRetina5_42Width
+            return kiPhoneRetina5_42Width
         } else {
-            return iPhoneRetina5_42Height
+            return kiPhoneRetina5_42Height
         }
-    
     }
     
     class func iPhoneRetina5_42ScreenSize(landscape: Bool) -> CGSize {
@@ -69,8 +76,7 @@ import UIKit
     class func iPhoneRetina5_42Bounds(landscape: Bool) -> CGRect {
         return CGRect(x: 0.0, y: 0.0, width: iPhoneRetina5_42Width(landscape: landscape), height: iPhoneRetina5_42Height(landscape: landscape));
     }
-        
-    
+            
     // iPhone 12, 12 Pro, 13, 13 Pro
     
     class func isRetina6_06Inch() -> Bool {
