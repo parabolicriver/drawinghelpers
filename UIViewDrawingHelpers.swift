@@ -59,7 +59,8 @@ import UIKit
     }
     
     class func iPhoneRetina5_42Bounds(landscape: Bool) -> CGRect {
-        return CGRect(x: 0.0, y: 0.0, width: iPhoneRetina5_42Width(landscape: landscape), height: iPhoneRetina5_42Height(landscape: landscape));
+        let size = iPhoneRetina5_42ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
     }
     
     class func isRetina5_42Inch() -> Bool {
@@ -105,7 +106,8 @@ import UIKit
     }
     
     class func iPhoneRetina6_06Bounds(landscape: Bool) -> CGRect {
-        return CGRect(x: 0.0, y: 0.0, width: iPhoneRetina6_06Width(landscape: landscape), height: iPhoneRetina6_06Height(landscape: landscape));
+        let size = iPhoneRetina6_06ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
     }
     
     class func isRetina6_06Inch() -> Bool {
@@ -151,7 +153,8 @@ import UIKit
     }
     
     class func iPhoneRetina6_68Bounds(landscape: Bool) -> CGRect {
-        return CGRect(x: 0.0, y: 0.0, width: iPhoneRetina6_68Width(landscape: landscape), height: iPhoneRetina6_68Height(landscape: landscape));
+        let size = iPhoneRetina6_68ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
     }
     
     class func isRetina6_68Inch() -> Bool {
