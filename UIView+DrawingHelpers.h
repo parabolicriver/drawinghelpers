@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-// Helpers for drawing views from code.
+// Helpers for drawing views from code. See
+// UIViewDrawingHelpers.swift for post iOS 13
+// helpers.
 @interface UIView (DrawingHelpers)
 
 /** iOS versions **/

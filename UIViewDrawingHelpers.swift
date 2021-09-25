@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// Helpers for drawing views from code. Pre
+// iOS 13 helpers are in UIView+DrawingHelpers.h
 @objc extension UIView {
     
     /** iOS versions **/
