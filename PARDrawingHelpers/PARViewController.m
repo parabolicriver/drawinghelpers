@@ -63,7 +63,7 @@
         NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);
         
         // getting confused with scale
-        NSLog(@"main scale is %f", [[UIScreen mainScreen] scale]);
+        NSLog(@"main screen scale from helpers is %f", [[UIScreen mainScreen] scale]);
         
         // iPhone 12 and 13 tests (from swift)
         NSLog(@"is landscape %d", [UIView isLandscape]);
