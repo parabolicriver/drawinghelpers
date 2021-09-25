@@ -8,6 +8,7 @@
 
 #import "PARViewController.h"
 #import "UIView+DrawingHelpers.h"
+#import "PARDrawingHelpers-Swift.h"
 
 @interface PARViewController ()
 
@@ -59,11 +60,26 @@
         NSLog(@"is iPhone 5.5 inch %d", [UIView isRetina5_5Inch]);
         NSLog(@"is iPhone 5.8 inch %d", [UIView isRetina5_8Inch]);
         NSLog(@"is iPhone 6.1 inch %d", [UIView isRetina6_1Inch]);
-        NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);
+        NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);        
+        
+        // iPhone 12 and 13 tests (from swift)
+        NSLog(@"is landscape %d", [UIView isLandscape]);
+        NSLog(@"is iPhone 5.42 inch %d", [UIView isRetina5_42Inch]);
+        NSLog(@"is iPhone 6.06 inch %d", [UIView isRetina6_06Inch]);
+        NSLog(@"is iPhone 6.68 inch %d", [UIView isRetina6_68Inch]);
+        if ([UIView isRetina5_42Inch])
+            NSLog(@"iPhone 5.42 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina5_42BoundsWithLandscape:([UIView isLandscape])]));
+        if ([UIView isRetina6_06Inch])
+            NSLog(@"iPhone 6.06 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_06BoundsWithLandscape:([UIView isLandscape])]));
+        if ([UIView isRetina6_68Inch])
+            NSLog(@"iPhone 6.68 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_68BoundsWithLandscape:([UIView isLandscape])]));
     }
     
     // test os versions
     NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d, iOS 12> %d, iOS 13> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater], [UIView iOS12AndLater], [UIView iOS13AndLater]);
+    
+    // test os versions from swift
+    NSLog(@"iOS 14> %d, iOS 15> %d", [UIView iOS14AndLater], [UIView iOS15AndLater]);
 }
 
 - (void)didReceiveMemoryWarning
