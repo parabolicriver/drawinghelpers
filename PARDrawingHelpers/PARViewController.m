@@ -64,6 +64,11 @@
         
         // getting confused with scale
         NSLog(@"main scale is %f", [[UIScreen mainScreen] scale]);
+        
+        // iPhone 12 and 13 tests (from swift)
+        NSLog(@"is iPhone 5.42 inch %d", [UIView isRetina5_42Inch]);
+        NSLog(@"is iPhone 6.06 inch %d", [UIView isRetina6_06Inch]);
+        NSLog(@"is iPhone 6.68 inch %d", [UIView isRetina6_68Inch]);
     }
     
     // test os versions
