@@ -35,8 +35,8 @@ import UIKit
     
     // iPhone 12 mini, 13 mini (however this size is
     // same as isRetina5_8Inch i.e. iPhone X, XS and 11 Pro
-    // in terms of points/pixels and also scale so these
-    // methods for this size are sort of redundant)    
+    // in terms of points and reported scale (but not pixesl!)
+    // so these methods for this size are sort of redundant)    
     
     fileprivate static let kiPhoneRetina5_42Width = 375.0
     fileprivate static let kiPhoneRetina5_42Height = 812.0

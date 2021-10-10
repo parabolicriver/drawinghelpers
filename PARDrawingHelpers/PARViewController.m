@@ -75,6 +75,13 @@
             NSLog(@"iPhone 6.68 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_68BoundsWithLandscape:([UIView isLandscape])]));
     }
     
+    // actual pixel size and scaling
+    CGRect sizeInPixels = [[UIScreen mainScreen] nativeBounds];
+    CGRect sizeInPoints = [[UIScreen mainScreen] bounds];
+    CGFloat reportedScale = [[UIScreen mainScreen] scale];
+    CGFloat actualScale = sizeInPixels.size.width / sizeInPoints.size.width;
+    NSLog(@"reported scale %f, actual scale %f, size in pixels %@", reportedScale, actualScale, NSStringFromCGRect(sizeInPixels));
+    
     // test os versions
     NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d, iOS 12> %d, iOS 13> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater], [UIView iOS12AndLater], [UIView iOS13AndLater]);
     
