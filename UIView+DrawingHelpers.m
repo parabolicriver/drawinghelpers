@@ -93,6 +93,18 @@
     return NO;
 }
 
++ (BOOL)isRectangulariPhone
+{
+    if ([UIView isRetina3_5Inch] || [UIView isRetina4Inch] || [UIView isRetina4_7Inch] || [UIView isRetina5_5Inch])
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 + (BOOL)isRetina3_5Inch
 {
     if ([UIView isRetinaiPhone])

@@ -27,6 +27,7 @@
 
 + (BOOL)isiPhone;                   // any iPhone
 + (BOOL)isRetinaiPhone;             // any retina iPhone
++ (BOOL)isRectangulariPhone;        // older non-notch iPhones
 + (BOOL)isRetina3_5Inch;            // iPhone 4, 4S
 + (BOOL)isRetina4Inch;              // iPhone 5, 5c, 5s and SE
 + (BOOL)isRetina4_7Inch;            // iPhone 6, 6s, 7 and 8, SE2
