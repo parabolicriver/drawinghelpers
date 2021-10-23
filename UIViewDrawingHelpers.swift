@@ -177,12 +177,34 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
+    /** iPhones Display Zoomed **/
+    
     // iPhones with Display Zoom turned on return a different
     // size. The following devices now have Display Zoom support:
     // iPhone 6s Plus, iPhone 6s, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus,
     // iPhone X, iPhone Xs, iPhone Xs Max, iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max,
     // iPhone SE (2nd gen), iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12 mini,
     // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
+    
+    /*
+    Display Zoom sizes:
+    
+    iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro,
+    6.06 inch - normal - {{0, 0}, {390, 844}}
+    6.06 inch - zoomed - {{0, 0}, {320, 693}}
+
+    iPhone 12 Pro Max, iPhone 13 Pro Max
+    6.68 inch - normal - {{0, 0}, {428, 926}}
+    6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+
+    iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini
+    5.8 inch (5.42 inch) - normal - {{0, 0}, {375, 812}}
+    5.8 inch (5.42 inch) - zoomed - {{0, 0}, {320, 693}}
+
+    iPhone XR, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max
+    6.1 inch - normal - {{0, 0}, {414, 896}}
+    6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+    */
     
     
 }
