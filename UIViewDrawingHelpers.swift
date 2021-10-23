@@ -187,24 +187,34 @@ import UIKit
     // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
     
     /*
-    Display Zoom sizes:
-    
-    iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro,
-    6.06 inch - normal - {{0, 0}, {390, 844}}
-    6.06 inch - zoomed - {{0, 0}, {320, 693}}
+     
+     Display Zoom sizes:
+     
+     iPhone 6s, iPhone 7, iPhone 8, iPhone SE (2nd gen)
+     4.7 inch - normal - {{0, 0}, {375, 667}}
+     4.7 inch - zoomed - {{0, 0}, {320, 568}} - becomes same as 4 inch
 
-    iPhone 12 Pro Max, iPhone 13 Pro Max
-    6.68 inch - normal - {{0, 0}, {428, 926}}
-    6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+     iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus
+     5.5 inch - normal - {{0, 0}, {414, 736}}
+     5.5 inch - zoomed - {{0, 0}, {375, 667}} - becomes same as 4.7 inch
 
-    iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini
-    5.8 inch (5.42 inch) - normal - {{0, 0}, {375, 812}}
-    5.8 inch (5.42 inch) - zoomed - {{0, 0}, {320, 693}}
+     iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini
+     5.8 inch (5.42 inch) - normal - {{0, 0}, {375, 812}}
+     5.8 inch (5.42 inch) - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
-    iPhone XR, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max
-    6.1 inch - normal - {{0, 0}, {414, 896}}
-    6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
-    */
+     iPhone XR, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max
+     6.1 inch - normal - {{0, 0}, {414, 896}}
+     6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+
+     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+     6.06 inch - normal - {{0, 0}, {390, 844}}
+     6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
+
+     iPhone 12 Pro Max, iPhone 13 Pro Max
+     6.68 inch - normal - {{0, 0}, {428, 926}}
+     6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+     
+     */
     
     
 }
