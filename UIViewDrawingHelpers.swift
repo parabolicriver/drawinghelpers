@@ -217,6 +217,8 @@ import UIKit
      */
     
     // iPhone Display Zoomed Size 1
+    // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
+    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
