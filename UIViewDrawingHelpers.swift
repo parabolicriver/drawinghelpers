@@ -216,6 +216,51 @@ import UIKit
      
      */
     
+    // iPhone Display Zoomed Size 1
     
+    fileprivate static let kiPhoneRetinaDZ1Width = 320.0
+    fileprivate static let kiPhoneRetinaDZ1Height = 693.0
+    
+    class func iPhoneRetinaDZ1Width(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetinaDZ1Height
+        } else {
+            return kiPhoneRetinaDZ1Width
+        }
+    }
+    
+    class func iPhoneRetinaDZ1Height(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetinaDZ1Width
+        } else {
+            return kiPhoneRetinaDZ1Height
+        }
+    }
+    
+    class func iPhoneRetinaDZ1ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetinaDZ1Width(landscape: landscape), height: iPhoneRetinaDZ1Height(landscape: landscape));
+    }
+    
+    class func iPhoneRetinaDZ1Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetinaDZ1ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+    
+    class func isRetinaDZ1Inch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetinaDZ1Height && screenBounds.size.width == kiPhoneRetinaDZ1Width) ||
+                (screenBounds.size.height == kiPhoneRetinaDZ1Width && screenBounds.size.width == kiPhoneRetinaDZ1Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
+    }
 }
 
