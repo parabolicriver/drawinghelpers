@@ -73,6 +73,11 @@
             NSLog(@"iPhone 6.06 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_06BoundsWithLandscape:([UIView isLandscape])]));
         if ([UIView isRetina6_68Inch])
             NSLog(@"iPhone 6.68 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_68BoundsWithLandscape:([UIView isLandscape])]));
+        
+        // iPhone display zoom tests
+        NSLog(@"is iPhone DZ1 inch %d", [UIView isRetinaDZ1Inch]);
+        if ([UIView isRetinaDZ1Inch])
+            NSLog(@"iPhone DZ1 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetinaDZ1BoundsWithLandscape:([UIView isLandscape])]));
     }
     
     // actual pixel size and scaling

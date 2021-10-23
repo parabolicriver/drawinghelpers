@@ -176,5 +176,88 @@ import UIKit
         
         return isScale3 && widthAndHeightMatch;
     }
+    
+    /** iPhones Display Zoomed **/
+    
+    // iPhones with Display Zoom turned on return a different size.
+    // The following devices have Display Zoom support starting iOS 14:
+    // iPhone 6s, iPhone 6s Plus, iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus,
+    // iPhone X, iPhone Xs, iPhone Xs Max, iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max,
+    // iPhone SE (2nd gen), iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12 mini,
+    // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
+    
+    /*
+     
+     Display Zoom sizes:
+     
+     iPhone 6s, iPhone 7, iPhone 8, iPhone SE (2nd gen)
+     4.7 inch - normal - {{0, 0}, {375, 667}}
+     4.7 inch - zoomed - {{0, 0}, {320, 568}} - becomes same as 4 inch
+
+     iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus
+     5.5 inch - normal - {{0, 0}, {414, 736}}
+     5.5 inch - zoomed - {{0, 0}, {375, 667}} - becomes same as 4.7 inch
+
+     iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini
+     5.8 inch (5.42 inch) - normal - {{0, 0}, {375, 812}}
+     5.8 inch (5.42 inch) - zoomed - {{0, 0}, {320, 693}} - new zoomed size
+
+     iPhone XR, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max
+     6.1 inch - normal - {{0, 0}, {414, 896}}
+     6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+
+     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+     6.06 inch - normal - {{0, 0}, {390, 844}}
+     6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
+
+     iPhone 12 Pro Max, iPhone 13 Pro Max
+     6.68 inch - normal - {{0, 0}, {428, 926}}
+     6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+     
+     */
+    
+    // iPhone Display Zoomed Size 1
+    // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
+    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+    
+    fileprivate static let kiPhoneRetinaDZ1Width = 320.0
+    fileprivate static let kiPhoneRetinaDZ1Height = 693.0
+    
+    class func iPhoneRetinaDZ1Width(landscape: Bool) -> CGFloat {
+        if landscape {
+            return kiPhoneRetinaDZ1Height
+        } else {
+            return kiPhoneRetinaDZ1Width
+        }
+    }
+    
+    class func iPhoneRetinaDZ1Height(landscape: Bool) -> CGFloat {
+        if landscape {
+            return kiPhoneRetinaDZ1Width
+        } else {
+            return kiPhoneRetinaDZ1Height
+        }
+    }
+    
+    class func iPhoneRetinaDZ1ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetinaDZ1Width(landscape: landscape), height: iPhoneRetinaDZ1Height(landscape: landscape))
+    }
+    
+    class func iPhoneRetinaDZ1Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetinaDZ1ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
+    }
+    
+    class func isRetinaDZ1Inch() -> Bool {
+        let screenBounds = UIScreen.main.bounds
+        
+        if (UIView.isRetinaiPhone() &&
+            ((screenBounds.size.height == kiPhoneRetinaDZ1Height && screenBounds.size.width == kiPhoneRetinaDZ1Width) ||
+            (screenBounds.size.height == kiPhoneRetinaDZ1Width && screenBounds.size.width == kiPhoneRetinaDZ1Height))) {
+            return true
+        } else {
+            return false
+        }
+    }
 }
 
