@@ -23,7 +23,7 @@
 + (BOOL)iOS12AndLater;
 + (BOOL)iOS13AndLater;
 
-/** Screen properties. **/
+/** iPhones **/
 
 + (BOOL)isiPhone;                   // any iPhone
 + (BOOL)isRetinaiPhone;             // any retina iPhone
@@ -35,11 +35,21 @@
 + (BOOL)isRetina5_8Inch;            // iPhone X, XS and 11 Pro (5.42 iPhone 12 mini, 13 mini in points and reported scale matches this but not in pixels)
 + (BOOL)isRetina6_1Inch;            // iPhone XR, 11
 + (BOOL)isRetina6_5Inch;            // iPhone XS Max, 11 Pro Max
+
+/** iPads **/
+
+// Note:
+// We are so far down the line that all iPads supported by
+// iOS are now ones Retina Displays, assuming iOS 10 and above.
+
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
 + (BOOL)isiPadPro12_9;
 + (BOOL)isiPadPro10_5;
 + (BOOL)isiPadPro11;
+
+/** Screen properties. **/
+
 + (UIDeviceOrientation)deviceOrientation;
 + (UIInterfaceOrientation)interfaceOrientation;
 + (BOOL)isPortrait;                 // check using UIDevice, device orientation checks
