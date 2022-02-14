@@ -60,7 +60,7 @@
     return version.majorVersion >= 13;
 }
 
-#pragma mark - Screen Properties
+#pragma mark - iPhones
 
 + (BOOL)isiPhone
 {
@@ -228,6 +228,8 @@
     return (isScale3 && widthAndHeightMatch);
 }
 
+#pragma mark - iPads
+
 + (BOOL)isiPad
 {
     UIDevice *device = [UIDevice currentDevice];
@@ -298,6 +300,8 @@
     
     return NO;
 }
+
+#pragma mark - Screen Properties
 
 + (UIDeviceOrientation)deviceOrientation
 {
