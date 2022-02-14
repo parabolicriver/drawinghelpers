@@ -118,6 +118,9 @@
 // Note:
 // Last updated for iPad Pro 12.9 first generation only.
 
+#warning cleanup the last updated note above
+#warning do we have or need to support display zoomed ipads? i can't seem to find the setting at my end - but check once
+
 + (CGFloat)iPadWidth:(BOOL)landscape;
 + (CGFloat)iPadHeight:(BOOL)landscape;
 + (CGSize)iPadScreenSize:(BOOL)landscape;
