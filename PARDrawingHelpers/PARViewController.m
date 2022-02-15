@@ -42,6 +42,22 @@
         NSLog(@"is iPad Pro 12.9 inch %d", [UIView isiPadPro12_9]);
         NSLog(@"is iPad Pro 10.5 inch %d", [UIView isiPadPro10_5]);
         NSLog(@"is iPad Pro 11 inch %d", [UIView isiPadPro11]);
+        
+        // new swift based ipad helpers
+
+        NSLog(@"iPad 9.7 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina9_7Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina9_7BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 8.3 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina8_3Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina8_3BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 10.2 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_2Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_2BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 10.5 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_5Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_5BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 10.9 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_9Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_9BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 11.0 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina11Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina11BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 12.9 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina12_9Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina12_9BoundsWithLandscape:YES]));
     }
     
     if ([UIView isiPhone])
