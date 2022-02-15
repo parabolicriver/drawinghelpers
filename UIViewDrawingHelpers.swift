@@ -272,7 +272,7 @@ import UIKit
      iPad Air 10.5 inches 2224 x 1668 (3rd Generation)
      iPad Air 10.9 inches 2360 x 1640 (4th Generation)
 
-     iPad Mini 7.9 inches 2048 x 1536 (all upto 5th Generation (/2 for iPad Mini 1)
+     iPad Mini 7.9 inches 2048 x 1536 (all upto 5th Generation ,/2 for iPad Mini 1, same as 9.7 inches iPad)
      iPad Mini 8.3 inches 2266 x 1488 (6th Generation)
 
      iPad Pro 9.7 inches 2048 x 1536
@@ -281,5 +281,48 @@ import UIKit
      iPad Pro 12.9 inches 2732 x 2048 (1st, 2nd, 3rd, 4th Generation)
      
      */
+    
+    // iPad 9.7 inches
+    // 2048x1536
+    // 1024x768
+    
+    fileprivate static let kiPadRetina9_7Width = 1024.0
+    fileprivate static let kiPadRetina9_7Height = 768.0
+    
+    class func iPadRetina9_7Width(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina9_7Height
+        } else {
+            return kiPadRetina9_7Width
+        }
+    }
+    
+    class func iPadRetina9_7Height(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina9_7Width
+        } else {
+            return kiPadRetina9_7Height
+        }
+    }
+    
+    class func iPadRetina9_7ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPadRetina9_7Width(landscape: landscape), height: iPadRetina9_7Height(landscape: landscape))
+    }
+    
+    class func iPadRetina9_7Bounds(landscape: Bool) -> CGRect {
+        let size = iPadRetina9_7ScreenSize(landscape: landscape)
+        return CGRect(x:0.0, y:0.0, width: size.width, height: size.height)
+    }
+    
+    class func isiPadRetina9_7Inch() -> Bool {
+        if (UIView.isRetinaiPad()) {
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPadRetina9_7Height && screenBounds.size.width == kiPadRetina9_7Width) || (screenBounds.size.height == kiPadRetina9_7Width && screenBounds.size.width == kiPadRetina9_7Height)) {
+                return true
+            }
+        }
+            
+        return false
+    }
 }
 

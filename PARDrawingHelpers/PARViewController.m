@@ -42,6 +42,9 @@
         NSLog(@"is iPad Pro 12.9 inch %d", [UIView isiPadPro12_9]);
         NSLog(@"is iPad Pro 10.5 inch %d", [UIView isiPadPro10_5]);
         NSLog(@"is iPad Pro 11 inch %d", [UIView isiPadPro11]);
+        
+        // new swift based ipad helpers
+        NSLog(@"iPad 9.7 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina9_7Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina9_7BoundsWithLandscape:YES]));
     }
     
     if ([UIView isiPhone])
