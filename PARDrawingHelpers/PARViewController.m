@@ -52,6 +52,8 @@
         NSLog(@"iPad 10.2 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_2Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_2BoundsWithLandscape:YES]));
         
         NSLog(@"iPad 10.5 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_5Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_5BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 10.9 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina10_9Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina10_9BoundsWithLandscape:YES]));
     }
     
     if ([UIView isiPhone])
