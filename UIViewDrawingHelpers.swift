@@ -324,5 +324,48 @@ import UIKit
             
         return false
     }
+    
+    // iPad 8.3 inches
+    // 2266x1488
+    // 1133x744
+    
+    fileprivate static let kiPadRetina8_3Width = 1133.0
+    fileprivate static let kiPadRetina8_3Height = 744.0
+    
+    class func iPadRetina8_3Width(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina8_3Height
+        } else {
+            return kiPadRetina8_3Width
+        }
+    }
+    
+    class func iPadRetina8_3Height(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina8_3Width
+        } else {
+            return kiPadRetina8_3Height
+        }
+    }
+    
+    class func iPadRetina8_3ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPadRetina8_3Width(landscape: landscape), height: iPadRetina8_3Height(landscape: landscape))
+    }
+    
+    class func iPadRetina8_3Bounds(landscape: Bool) -> CGRect {
+        let size = iPadRetina8_3ScreenSize(landscape: landscape)
+        return CGRect(x:0.0, y:0.0, width: size.width, height: size.height)
+    }
+    
+    class func isiPadRetina8_3Inch() -> Bool {
+        if (UIView.isRetinaiPad()) {
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPadRetina8_3Height && screenBounds.size.width == kiPadRetina8_3Width) || (screenBounds.size.height == kiPadRetina8_3Width && screenBounds.size.width == kiPadRetina8_3Height)) {
+                return true
+            }
+        }
+            
+        return false
+    }
 }
 

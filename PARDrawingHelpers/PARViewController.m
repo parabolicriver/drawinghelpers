@@ -45,6 +45,8 @@
         
         // new swift based ipad helpers
         NSLog(@"iPad 9.7 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina9_7Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina9_7BoundsWithLandscape:YES]));
+        
+        NSLog(@"iPad 8.3 - is %d, screen bounds %@, calculated landscape screen bounds %@", [UIView isiPadRetina8_3Inch],  NSStringFromCGRect(UIScreen.mainScreen.bounds), NSStringFromCGRect([UIView iPadRetina8_3BoundsWithLandscape:YES]));
     }
     
     if ([UIView isiPhone])
