@@ -40,7 +40,7 @@
 
 // Note:
 // We are so far down the line that all iPads supported by
-// iOS are now ones Retina Displays, assuming iOS 10 and above.
+// iOS now have Retina Displays, assuming iOS 10 and above.
 
 + (BOOL)isiPad;
 + (BOOL)isRetinaiPad;
