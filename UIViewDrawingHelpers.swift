@@ -367,5 +367,48 @@ import UIKit
             
         return false
     }
+    
+    // iPad 10.2 inches
+    // 2160x1620
+    // 1080x810
+    
+    fileprivate static let kiPadRetina10_2Width = 1080.0
+    fileprivate static let kiPadRetina10_2Height = 810.0
+    
+    class func iPadRetina10_2Width(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina10_2Height
+        } else {
+            return kiPadRetina10_2Width
+        }
+    }
+    
+    class func iPadRetina10_2Height(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina10_2Width
+        } else {
+            return kiPadRetina10_2Height
+        }
+    }
+    
+    class func iPadRetina10_2ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPadRetina10_2Width(landscape: landscape), height: iPadRetina10_2Height(landscape: landscape))
+    }
+    
+    class func iPadRetina10_2Bounds(landscape: Bool) -> CGRect {
+        let size = iPadRetina10_2ScreenSize(landscape: landscape)
+        return CGRect(x:0.0, y:0.0, width: size.width, height: size.height)
+    }
+    
+    class func isiPadRetina10_2Inch() -> Bool {
+        if (UIView.isRetinaiPad()) {
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPadRetina10_2Height && screenBounds.size.width == kiPadRetina10_2Width) || (screenBounds.size.height == kiPadRetina10_2Width && screenBounds.size.width == kiPadRetina10_2Height)) {
+                return true
+            }
+        }
+            
+        return false
+    }
 }
 
