@@ -496,5 +496,48 @@ import UIKit
             
         return false
     }
+    
+    // iPad 11 inches
+    // 2388x1668
+    // 1194x834
+    
+    fileprivate static let kiPadRetina11Width = 1194.0
+    fileprivate static let kiPadRetina11Height = 834.0
+    
+    class func iPadRetina11Width(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina11Height
+        } else {
+            return kiPadRetina11Width
+        }
+    }
+    
+    class func iPadRetina11Height(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina11Width
+        } else {
+            return kiPadRetina11Height
+        }
+    }
+    
+    class func iPadRetina11ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPadRetina11Width(landscape: landscape), height: iPadRetina11Height(landscape: landscape))
+    }
+    
+    class func iPadRetina11Bounds(landscape: Bool) -> CGRect {
+        let size = iPadRetina11ScreenSize(landscape: landscape)
+        return CGRect(x:0.0, y:0.0, width: size.width, height: size.height)
+    }
+    
+    class func isiPadRetina11Inch() -> Bool {
+        if (UIView.isRetinaiPad()) {
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPadRetina11Height && screenBounds.size.width == kiPadRetina11Width) || (screenBounds.size.height == kiPadRetina11Width && screenBounds.size.width == kiPadRetina11Height)) {
+                return true
+            }
+        }
+            
+        return false
+    }
 }
 
