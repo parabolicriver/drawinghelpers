@@ -539,5 +539,48 @@ import UIKit
             
         return false
     }
+    
+    // iPad 12.9 inches (returns 9.7 inches size when display zoomed)
+    // 2732x2048
+    // 1366x1024
+    
+    fileprivate static let kiPadRetina12_9Width = 1366.0
+    fileprivate static let kiPadRetina12_9Height = 1024.0
+    
+    class func iPadRetina12_9Width(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina12_9Height
+        } else {
+            return kiPadRetina12_9Width
+        }
+    }
+    
+    class func iPadRetina12_9Height(landscape: Bool) -> CGFloat {
+        if (!landscape) {
+            return kiPadRetina12_9Width
+        } else {
+            return kiPadRetina12_9Height
+        }
+    }
+    
+    class func iPadRetina12_9ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPadRetina12_9Width(landscape: landscape), height: iPadRetina12_9Height(landscape: landscape))
+    }
+    
+    class func iPadRetina12_9Bounds(landscape: Bool) -> CGRect {
+        let size = iPadRetina12_9ScreenSize(landscape: landscape)
+        return CGRect(x:0.0, y:0.0, width: size.width, height: size.height)
+    }
+    
+    class func isiPadRetina12_9Inch() -> Bool {
+        if (UIView.isRetinaiPad()) {
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPadRetina12_9Height && screenBounds.size.width == kiPadRetina12_9Width) || (screenBounds.size.height == kiPadRetina12_9Width && screenBounds.size.width == kiPadRetina12_9Height)) {
+                return true
+            }
+        }
+            
+        return false
+    }
 }
 
