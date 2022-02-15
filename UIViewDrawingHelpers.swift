@@ -259,5 +259,27 @@ import UIKit
             return false
         }
     }
+    
+    /*
+     
+     iPads:
+     Man there are a lot of iPads.
+     
+     iPad 9.7 inches 2048 x 1536 (all upto 6th Generation, /2 for non-retina ones)
+     iPad 10.2 inches 2160 x 1620 (7th, 8th, 9th Generation)
+
+     iPad Air 9.7 inches 2048 x 1536 (1st, 2nd Generation)
+     iPad Air 10.5 inches 2224 x 1668 (3rd Generation)
+     iPad Air 10.9 inches 2360 x 1640 (4th Generation)
+
+     iPad Mini 7.9 inches 2048 x 1536 (all upto 5th Generation (/2 for iPad Mini 1)
+     iPad Mini 8.3 inches 2266 x 1488 (6th Generation)
+
+     iPad Pro 9.7 inches 2048 x 1536
+     iPad Pro 10.5 inches 2224 x 1668
+     iPad Pro 11 inches 2388 x 1668 (1st, 2nd, 3rd Generation)
+     iPad Pro 12.9 inches 2732 x 2048 (1st, 2nd, 3rd, 4th Generation)
+     
+     */
 }
 
