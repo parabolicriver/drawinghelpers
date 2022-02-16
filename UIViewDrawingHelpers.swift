@@ -272,7 +272,7 @@ import UIKit
      iPad Air 10.5 inches 2224 x 1668 (3rd Generation)
      iPad Air 10.9 inches 2360 x 1640 (4th Generation)
 
-     iPad Mini 7.9 inches 2048 x 1536 (all upto 5th Generation ,/2 for iPad Mini 1, same as 9.7 inches iPad)
+     iPad Mini 7.9 inches 2048 x 1536 (all upto 5th Generation , /2 for iPad Mini 1, same as 9.7 inches iPad)
      iPad Mini 8.3 inches 2266 x 1488 (6th Generation)
 
      iPad Pro 9.7 inches 2048 x 1536
