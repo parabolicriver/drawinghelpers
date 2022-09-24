@@ -193,6 +193,7 @@ import UIKit
     // iPhone X, iPhone Xs, iPhone Xs Max, iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max,
     // iPhone SE (2nd gen), iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12 mini,
     // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
+    // iPhone 14, iPhone 14 Plus, iPhone 14 Pro, iPhone Pro Max.
     
     /*
      
@@ -214,11 +215,11 @@ import UIKit
      6.1 inch - normal - {{0, 0}, {414, 896}}
      6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
 
-     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
      6.06 inch - normal - {{0, 0}, {390, 844}}
      6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
-     iPhone 12 Pro Max, iPhone 13 Pro Max
+     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus, iPhone 14 Pro Max
      6.68 inch - normal - {{0, 0}, {428, 926}}
      6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
      
@@ -226,7 +227,7 @@ import UIKit
     
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
-    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
