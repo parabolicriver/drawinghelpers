@@ -91,7 +91,7 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
             
-    // iPhone 12, 12 Pro, 13, 13 Pro
+    // iPhone 12, 12 Pro, 13, 13 Pro, 14
     
     fileprivate static let kiPhoneRetina6_06Width = 390.0
     fileprivate static let kiPhoneRetina6_06Height = 844.0
@@ -138,7 +138,7 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
-    // iPhone 12 Pro Max, 13 Pro Max
+    // iPhone 12 Pro Max, 13 Pro Max, 14 Plus
     
     fileprivate static let kiPhoneRetina6_68Width = 428.0
     fileprivate static let kiPhoneRetina6_68Height = 926.0
