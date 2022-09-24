@@ -110,6 +110,12 @@
     NSLog(@"iOS 14> %d, iOS 15> %d, iOS 16> %d", [UIView iOS14AndLater], [UIView iOS15AndLater], [UIView iOS16AndLater]);
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    // safe area dump
+    NSLog(@"safe area insets %@", NSStringFromUIEdgeInsets(UIApplication.sharedApplication.keyWindow.safeAreaInsets));
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
