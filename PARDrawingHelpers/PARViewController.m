@@ -69,6 +69,9 @@
         }
         NSLog(@"main screen bounds %@", NSStringFromCGRect([[UIScreen mainScreen] bounds]));
         
+        // orientation
+        NSLog(@"is landscape %d", [UIView isLandscape]);
+        
         // iPhone device tests
         NSLog(@"is iPhone 3.5 inch %d", [UIView isRetina3_5Inch]);
         NSLog(@"is iPhone 4 inch %d", [UIView isRetina4Inch]);
@@ -78,22 +81,29 @@
         NSLog(@"is iPhone 6.1 inch %d", [UIView isRetina6_1Inch]);
         NSLog(@"is iPhone 6.5 inch %d", [UIView isRetina6_5Inch]);        
         
-        // iPhone 12 and 13 tests (from swift)
-        NSLog(@"is landscape %d", [UIView isLandscape]);
+        // iPhone 12 and 13 tests and later (from swift)
         NSLog(@"is iPhone 5.42 inch %d", [UIView isRetina5_42Inch]);
         NSLog(@"is iPhone 6.06 inch %d", [UIView isRetina6_06Inch]);
         NSLog(@"is iPhone 6.68 inch %d", [UIView isRetina6_68Inch]);
+        NSLog(@"is iPhone 6.12 inch %d", [UIView isRetina6_12Inch]);
+        NSLog(@"is iPhone 6.69 inch %d", [UIView isRetina6_69Inch]);
+        
+        // iPhone display zoom tests
+        NSLog(@"is iPhone DZ1 inch %d", [UIView isRetinaDZ1Inch]);
+        if ([UIView isRetinaDZ1Inch])
+            NSLog(@"iPhone DZ1 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetinaDZ1BoundsWithLandscape:([UIView isLandscape])]));
+        
+        // bounds tests
         if ([UIView isRetina5_42Inch])
             NSLog(@"iPhone 5.42 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina5_42BoundsWithLandscape:([UIView isLandscape])]));
         if ([UIView isRetina6_06Inch])
             NSLog(@"iPhone 6.06 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_06BoundsWithLandscape:([UIView isLandscape])]));
         if ([UIView isRetina6_68Inch])
             NSLog(@"iPhone 6.68 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_68BoundsWithLandscape:([UIView isLandscape])]));
-        
-        // iPhone display zoom tests
-        NSLog(@"is iPhone DZ1 inch %d", [UIView isRetinaDZ1Inch]);
-        if ([UIView isRetinaDZ1Inch])
-            NSLog(@"iPhone DZ1 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetinaDZ1BoundsWithLandscape:([UIView isLandscape])]));
+        if ([UIView isRetina6_12Inch])
+            NSLog(@"iPhone 6.12 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_12BoundsWithLandscape:([UIView isLandscape])]));
+        if ([UIView isRetina6_69Inch])
+            NSLog(@"iPhone 6.69 inch screen bounds %@", NSStringFromCGRect([UIView iPhoneRetina6_69BoundsWithLandscape:([UIView isLandscape])]));                
     }
     
     // actual pixel size and scaling
@@ -107,7 +117,13 @@
     NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d, iOS 12> %d, iOS 13> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater], [UIView iOS12AndLater], [UIView iOS13AndLater]);
     
     // test os versions from swift
-    NSLog(@"iOS 14> %d, iOS 15> %d", [UIView iOS14AndLater], [UIView iOS15AndLater]);
+    NSLog(@"iOS 14> %d, iOS 15> %d, iOS 16> %d", [UIView iOS14AndLater], [UIView iOS15AndLater], [UIView iOS16AndLater]);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    // safe area dump
+    NSLog(@"safe area insets %@", NSStringFromUIEdgeInsets(UIApplication.sharedApplication.keyWindow.safeAreaInsets));
 }
 
 - (void)didReceiveMemoryWarning

@@ -31,6 +31,14 @@ import UIKit
         return false;
     }
     
+    class func iOS16AndLater() -> Bool {
+        if let iOSVersion = Float(UIDevice.current.systemVersion) {
+            return iOSVersion >= 16.0
+        }
+        
+        return false;
+    }
+    
     /** iPhones **/
     
     // iPhone 12 mini, 13 mini (however this size is
@@ -83,7 +91,7 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
             
-    // iPhone 12, 12 Pro, 13, 13 Pro
+    // iPhone 12, 12 Pro, 13, 13 Pro, 14
     
     fileprivate static let kiPhoneRetina6_06Width = 390.0
     fileprivate static let kiPhoneRetina6_06Height = 844.0
@@ -130,7 +138,7 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
-    // iPhone 12 Pro Max, 13 Pro Max
+    // iPhone 12 Pro Max, 13 Pro Max, 14 Plus
     
     fileprivate static let kiPhoneRetina6_68Width = 428.0
     fileprivate static let kiPhoneRetina6_68Height = 926.0
@@ -177,6 +185,100 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
+    // iPhone 14 Pro
+    
+    fileprivate static let kiPhoneRetina6_12Width = 393.0
+    fileprivate static let kiPhoneRetina6_12Height = 852.0
+    
+    class func iPhoneRetina6_12Width(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_12Height
+        } else {
+            return kiPhoneRetina6_12Width
+        }
+    }
+    
+    class func iPhoneRetina6_12Height(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_12Width
+        } else {
+            return kiPhoneRetina6_12Height
+        }
+    }
+    
+    class func iPhoneRetina6_12ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetina6_12Width(landscape: landscape), height: iPhoneRetina6_12Height(landscape: landscape));
+    }
+    
+    class func iPhoneRetina6_12Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetina6_12ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+    
+    class func isRetina6_12Inch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina6_12Height && screenBounds.size.width == kiPhoneRetina6_12Width) ||
+                (screenBounds.size.height == kiPhoneRetina6_12Width && screenBounds.size.width == kiPhoneRetina6_12Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
+    }
+    
+    // iPhone 14 Pro Max
+    
+    fileprivate static let kiPhoneRetina6_69Width = 430.0
+    fileprivate static let kiPhoneRetina6_69Height = 932.0
+    
+    class func iPhoneRetina6_69Width(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_69Height
+        } else {
+            return kiPhoneRetina6_69Width
+        }
+    }
+    
+    class func iPhoneRetina6_69Height(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_69Width
+        } else {
+            return kiPhoneRetina6_69Height
+        }
+    }
+    
+    class func iPhoneRetina6_69ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetina6_69Width(landscape: landscape), height: iPhoneRetina6_69Height(landscape: landscape));
+    }
+    
+    class func iPhoneRetina6_69Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetina6_69ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+    
+    class func isRetina6_69Inch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina6_69Height && screenBounds.size.width == kiPhoneRetina6_69Width) ||
+                (screenBounds.size.height == kiPhoneRetina6_69Width && screenBounds.size.width == kiPhoneRetina6_69Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
+    }
+    
     /** iPhones Display Zoomed **/
     
     // iPhones with Display Zoom turned on return a different size.
@@ -185,6 +287,7 @@ import UIKit
     // iPhone X, iPhone Xs, iPhone Xs Max, iPhone XR, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max,
     // iPhone SE (2nd gen), iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12 mini,
     // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
+    // iPhone 14, iPhone 14 Plus, iPhone 14 Pro, iPhone Pro Max.
     
     /*
      
@@ -206,11 +309,11 @@ import UIKit
      6.1 inch - normal - {{0, 0}, {414, 896}}
      6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
 
-     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
      6.06 inch - normal - {{0, 0}, {390, 844}}
      6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
-     iPhone 12 Pro Max, iPhone 13 Pro Max
+     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus, iPhone 14 Pro Max
      6.68 inch - normal - {{0, 0}, {428, 926}}
      6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
      
@@ -218,7 +321,7 @@ import UIKit
     
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
-    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro
+    // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
