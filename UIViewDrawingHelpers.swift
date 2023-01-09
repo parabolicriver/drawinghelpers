@@ -13,7 +13,7 @@ import UIKit
 // iOS 13 helpers are in UIView+DrawingHelpers.h
 @objc extension UIView {
     
-    /** iOS versions **/
+    // MARK: -  iOS versions
     
     class func iOS14AndLater() -> Bool {
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
@@ -39,7 +39,7 @@ import UIKit
         return false;
     }
     
-    /** iPhones **/
+    // MARK: - iPhones
     
     // iPhone 12 mini, 13 mini (however this size is
     // same as isRetina5_8Inch i.e. iPhone X, XS and 11 Pro
@@ -279,7 +279,7 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
-    /** iPhones Display Zoomed **/
+    // MARK: - iPhones Display Zoomed
     
     // iPhones with Display Zoom turned on return a different size.
     // The following devices have Display Zoom support starting iOS 14:
@@ -362,6 +362,8 @@ import UIKit
             return false
         }
     }
+    
+    // MARK: - iPads
     
     /*
      
