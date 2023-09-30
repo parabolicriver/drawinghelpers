@@ -39,6 +39,14 @@ import UIKit
         return false;
     }
     
+    class func iOS17AndLater() -> Bool {
+        if let iOSVersion = Float(UIDevice.current.systemVersion) {
+            return iOSVersion >= 17.0
+        }
+        
+        return false;
+    }
+    
     // MARK: - iPhones
     
     // iPhone 12 mini, 13 mini (however this size is

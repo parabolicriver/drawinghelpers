@@ -117,7 +117,7 @@
     NSLog(@"iOS 7> %d, iOS 8> %d, iOS 9> %d, iOS 10> %d, iOS 11> %d, iOS 12> %d, iOS 13> %d", [UIView iOS7AndLater], [UIView iOS8AndLater], [UIView iOS9AndLater], [UIView iOS10AndLater], [UIView iOS11AndLater], [UIView iOS12AndLater], [UIView iOS13AndLater]);
     
     // test os versions from swift
-    NSLog(@"iOS 14> %d, iOS 15> %d, iOS 16> %d", [UIView iOS14AndLater], [UIView iOS15AndLater], [UIView iOS16AndLater]);
+    NSLog(@"iOS 14> %d, iOS 15> %d, iOS 16> %d, iOS 17> %d", [UIView iOS14AndLater], [UIView iOS15AndLater], [UIView iOS16AndLater], [UIView iOS17AndLater]);
 }
 
 - (void)viewDidAppear:(BOOL)animated
