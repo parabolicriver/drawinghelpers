@@ -321,9 +321,13 @@ import UIKit
      6.06 inch - normal - {{0, 0}, {390, 844}}
      6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
-     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus, iPhone 14 Pro Max
+     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus
      6.68 inch - normal - {{0, 0}, {428, 926}}
      6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+     
+     iPhone 14 Pro Max, iPhone 15 Plus, iPhone 15 Pro Max
+     6.69 inch - normal - {{0, 0}, {430, 932}}
+     6.69 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
      
      */
     
