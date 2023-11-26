@@ -49,6 +49,8 @@ import UIKit
     
     // MARK: - iPhones
     
+    // MARK: - 5.42
+    
     // iPhone 12 mini, 13 mini (however this size is
     // same as isRetina5_8Inch i.e. iPhone X, XS and 11 Pro
     // in terms of points and reported scale (but not pixels!)
@@ -99,6 +101,8 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
             
+    // MARK: - 6.06
+    
     // iPhone 12, 12 Pro, 13, 13 Pro, 14
     
     fileprivate static let kiPhoneRetina6_06Width = 390.0
@@ -145,6 +149,8 @@ import UIKit
         
         return isScale3 && widthAndHeightMatch;
     }
+    
+    // MARK: - 6.68
     
     // iPhone 12 Pro Max, 13 Pro Max, 14 Plus
     
@@ -193,6 +199,8 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
+    // MARK: - 6.12
+    
     // iPhone 14 Pro, 15, 15 Pro
     
     fileprivate static let kiPhoneRetina6_12Width = 393.0
@@ -239,6 +247,8 @@ import UIKit
         
         return isScale3 && widthAndHeightMatch;
     }
+    
+    // MARK: - 6.69
     
     // iPhone 14 Pro Max, 15 Plus, 15 Pro Max
     
@@ -331,6 +341,8 @@ import UIKit
      
      */
     
+    // MARK: - DZ1
+    
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
     // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
@@ -400,6 +412,8 @@ import UIKit
      
      */
     
+    // MARK: - 9.7
+    
     // iPad 9.7 inches
     // 2048x1536
     // 1024x768
@@ -442,6 +456,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 8.3
     
     // iPad 8.3 inches
     // 2266x1488
@@ -486,6 +502,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 10.2
+    
     // iPad 10.2 inches
     // 2160x1620
     // 1080x810
@@ -528,6 +546,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 10.5
     
     // iPad 10.5 inches
     // 2224x1668
@@ -572,6 +592,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 10.9
+    
     // iPad 10.9 inches
     // 2360x1640
     // 1180x820
@@ -615,6 +637,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 11
+    
     // iPad 11 inches
     // 2388x1668
     // 1194x834
@@ -657,6 +681,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 12.9
     
     // iPad 12.9 inches (returns 9.7 inches size when display zoomed)
     // 2732x2048
