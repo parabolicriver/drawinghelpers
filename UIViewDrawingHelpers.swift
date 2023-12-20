@@ -15,6 +15,11 @@ import UIKit
     
     // MARK: -  iOS versions
     
+    // Be sure to test with 2 digit and 3 digit
+    // version numbers always. iOS 17.0.1 was failing
+    // and I had no clue for a while why, the float
+    // conversion from string fails!! 
+    
     class func iOS14AndLater() -> Bool {
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
             return iOSVersion >= 14.0
