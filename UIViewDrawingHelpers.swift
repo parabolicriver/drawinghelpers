@@ -40,7 +40,11 @@ import UIKit
     }
     
     class func iOS17AndLater() -> Bool {
+        print("system version: " + UIDevice.current.systemVersion)
+        let convertedSV = Float(UIDevice.current.systemVersion)
+        //print ("converted sv: " + convertedSV)
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
+            print ("in if")
             return iOSVersion >= 17.0
         }
         
