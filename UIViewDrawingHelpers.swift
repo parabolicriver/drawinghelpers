@@ -15,24 +15,22 @@ import UIKit
     
     // MARK: -  iOS versions
             
-    class func iOS14AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 14.0
-        }
-        
-        return false;
-    }
-    
     // Be sure to test with 2 digit and 3 digit
     // version numbers always. iOS 17.0.1 was failing
     // and I had no clue for a while why, the float
-    // conversion from string fails!!
+    // conversion from string fails!! Interestingly
+    // the objc conversion still work even on
+    // iOS 17.0.1
     
-    // have moved minimum version for the
-    // project (and will be for our apps)
-    // to iOS 15 so not updating the ios
-    // version check before this
-    
+    class func iOS14AndLater() -> Bool {
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 14 {
+            return true
+        } else {
+            return false
+        }
+    }
+        
     class func iOS15AndLater() -> Bool {
         let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
         if iOSVersion >= 15 {
