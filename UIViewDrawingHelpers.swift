@@ -14,12 +14,7 @@ import UIKit
 @objc extension UIView {
     
     // MARK: -  iOS versions
-    
-    // Be sure to test with 2 digit and 3 digit
-    // version numbers always. iOS 17.0.1 was failing
-    // and I had no clue for a while why, the float
-    // conversion from string fails!! 
-    
+            
     class func iOS14AndLater() -> Bool {
         if let iOSVersion = Float(UIDevice.current.systemVersion) {
             return iOSVersion >= 14.0
@@ -28,32 +23,49 @@ import UIKit
         return false;
     }
     
+    // Be sure to test with 2 digit and 3 digit
+    // version numbers always. iOS 17.0.1 was failing
+    // and I had no clue for a while why, the float
+    // conversion from string fails!!
+    
+    // have moved minimum version for the
+    // project (and will be for our apps)
+    // to iOS 15 so not updating the ios
+    // version check before this
+    
     class func iOS15AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 15.0
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 15 {
+            return true
+        } else {
+            return false
         }
-        
-        return false;
     }
     
     class func iOS16AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 16.0
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 16 {
+            return true
+        } else {
+            return false
         }
-        
-        return false;
     }
     
     class func iOS17AndLater() -> Bool {
-        print("system version: " + UIDevice.current.systemVersion)
-        let convertedSV = Float(UIDevice.current.systemVersion)
-        //print ("converted sv: " + convertedSV)
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            print ("in if")
-            return iOSVersion >= 17.0
-        }
+        //print("system version: " + UIDevice.current.systemVersion)
+        // nil for iOS 17.0.1
+        //let convertedSV = Float(UIDevice.current.systemVersion)
+        // 2048.099 or 2048 with floor for iOS 17.0.1
+        //let floorFoundationSV = floor(NSFoundationVersionNumber)
+        // 17 for iOS 17.0.1
+        //let majoriOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
         
-        return false;
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 17 {
+            return true
+        } else {
+            return false
+        }
     }
     
     // MARK: - iPhones
