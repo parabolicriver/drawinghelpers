@@ -14,32 +14,61 @@ import UIKit
 @objc extension UIView {
     
     // MARK: -  iOS versions
+            
+    // Be sure to test with 2 digit and 3 digit
+    // version numbers always. iOS 17.0.1 was failing
+    // and I had no clue for a while why, the float
+    // conversion from string fails!! Interestingly
+    // the objc conversion still work even on
+    // iOS 17.0.1
     
     class func iOS14AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 14.0
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 14 {
+            return true
+        } else {
+            return false
         }
-        
-        return false;
     }
-    
-    class func iOS15AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 15.0
-        }
         
-        return false;
+    class func iOS15AndLater() -> Bool {
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 15 {
+            return true
+        } else {
+            return false
+        }
     }
     
     class func iOS16AndLater() -> Bool {
-        if let iOSVersion = Float(UIDevice.current.systemVersion) {
-            return iOSVersion >= 16.0
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 16 {
+            return true
+        } else {
+            return false
         }
+    }
+    
+    class func iOS17AndLater() -> Bool {
+        //print("system version: " + UIDevice.current.systemVersion)
+        // nil for iOS 17.0.1
+        //let convertedSV = Float(UIDevice.current.systemVersion)
+        // 2048.099 or 2048 with floor for iOS 17.0.1
+        //let floorFoundationSV = floor(NSFoundationVersionNumber)
+        // 17 for iOS 17.0.1
+        //let majoriOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
         
-        return false;
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 17 {
+            return true
+        } else {
+            return false
+        }
     }
     
     // MARK: - iPhones
+    
+    // MARK: - 5.42
     
     // iPhone 12 mini, 13 mini (however this size is
     // same as isRetina5_8Inch i.e. iPhone X, XS and 11 Pro
@@ -91,6 +120,8 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
             
+    // MARK: - 6.06
+    
     // iPhone 12, 12 Pro, 13, 13 Pro, 14
     
     fileprivate static let kiPhoneRetina6_06Width = 390.0
@@ -137,6 +168,8 @@ import UIKit
         
         return isScale3 && widthAndHeightMatch;
     }
+    
+    // MARK: - 6.68
     
     // iPhone 12 Pro Max, 13 Pro Max, 14 Plus
     
@@ -185,7 +218,9 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
-    // iPhone 14 Pro
+    // MARK: - 6.12
+    
+    // iPhone 14 Pro, 15, 15 Pro
     
     fileprivate static let kiPhoneRetina6_12Width = 393.0
     fileprivate static let kiPhoneRetina6_12Height = 852.0
@@ -232,7 +267,9 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
-    // iPhone 14 Pro Max
+    // MARK: - 6.69
+    
+    // iPhone 14 Pro Max, 15 Plus, 15 Pro Max
     
     fileprivate static let kiPhoneRetina6_69Width = 430.0
     fileprivate static let kiPhoneRetina6_69Height = 932.0
@@ -313,15 +350,22 @@ import UIKit
      6.06 inch - normal - {{0, 0}, {390, 844}}
      6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
-     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus, iPhone 14 Pro Max
+     iPhone 12 Pro Max, iPhone 13 Pro Max, iPhone 14 Plus
      6.68 inch - normal - {{0, 0}, {428, 926}}
      6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
      
+     iPhone 14 Pro Max, iPhone 15 Plus, iPhone 15 Pro Max
+     6.69 inch - normal - {{0, 0}, {430, 932}}
+     6.69 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
+     
      */
+    
+    // MARK: - DZ1
     
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
     // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
+    // iPhone 15, iPhone 15 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
@@ -387,6 +431,8 @@ import UIKit
      
      */
     
+    // MARK: - 9.7
+    
     // iPad 9.7 inches
     // 2048x1536
     // 1024x768
@@ -429,6 +475,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 8.3
     
     // iPad 8.3 inches
     // 2266x1488
@@ -473,6 +521,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 10.2
+    
     // iPad 10.2 inches
     // 2160x1620
     // 1080x810
@@ -515,6 +565,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 10.5
     
     // iPad 10.5 inches
     // 2224x1668
@@ -559,6 +611,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 10.9
+    
     // iPad 10.9 inches
     // 2360x1640
     // 1180x820
@@ -602,6 +656,8 @@ import UIKit
         return false
     }
     
+    // MARK: - 11
+    
     // iPad 11 inches
     // 2388x1668
     // 1194x834
@@ -644,6 +700,8 @@ import UIKit
             
         return false
     }
+    
+    // MARK: - 12.9
     
     // iPad 12.9 inches (returns 9.7 inches size when display zoomed)
     // 2732x2048
