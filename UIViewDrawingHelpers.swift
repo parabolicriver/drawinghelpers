@@ -314,7 +314,7 @@ import UIKit
         }
         
         return isScale3 && widthAndHeightMatch;
-    }        
+    }
     
     // MARK: - 6.3
     
@@ -358,6 +358,55 @@ import UIKit
             let screenBounds = UIScreen.main.bounds
             if ((screenBounds.size.height == kiPhoneRetina6_3Height && screenBounds.size.width == kiPhoneRetina6_3Width) ||
                 (screenBounds.size.height == kiPhoneRetina6_3Width && screenBounds.size.width == kiPhoneRetina6_3Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
+    }
+    
+    // MARK: - 6.9
+    
+    // iPhone 16 Pro Max
+    
+    fileprivate static let kiPhoneRetina6_9Width = 440.0
+    fileprivate static let kiPhoneRetina6_9Height = 956.0
+    
+    class func iPhoneRetina6_9Width(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_9Height
+        } else {
+            return kiPhoneRetina6_9Width
+        }
+    }
+    
+    class func iPhoneRetina6_9Height(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_9Width
+        } else {
+            return kiPhoneRetina6_9Height
+        }
+    }
+    
+    class func iPhoneRetina6_9ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetina6_9Width(landscape: landscape), height: iPhoneRetina6_9Height(landscape: landscape));
+    }
+    
+    class func iPhoneRetina6_9Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetina6_9ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+    
+    class func isRetina6_9Inch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina6_9Height && screenBounds.size.width == kiPhoneRetina6_9Width) ||
+                (screenBounds.size.height == kiPhoneRetina6_9Width && screenBounds.size.width == kiPhoneRetina6_9Height)) {
                 widthAndHeightMatch = true;
             }
         }
