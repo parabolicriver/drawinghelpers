@@ -220,7 +220,7 @@ import UIKit
     
     // MARK: - 6.12
     
-    // iPhone 14 Pro, 15, 15 Pro
+    // iPhone 14 Pro, 15, 15 Pro, 16
     
     fileprivate static let kiPhoneRetina6_12Width = 393.0
     fileprivate static let kiPhoneRetina6_12Height = 852.0
@@ -269,7 +269,7 @@ import UIKit
     
     // MARK: - 6.69
     
-    // iPhone 14 Pro Max, 15 Plus, 15 Pro Max
+    // iPhone 14 Pro Max, 15 Plus, 15 Pro Max, 16 Plus
     
     fileprivate static let kiPhoneRetina6_69Width = 430.0
     fileprivate static let kiPhoneRetina6_69Height = 932.0
@@ -325,6 +325,8 @@ import UIKit
     // iPhone SE (2nd gen), iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max, iPhone 12 mini,
     // iPhone 13, iPhone 13 Pro, iPhone 13 Pro Max, iPhone 13 mini.
     // iPhone 14, iPhone 14 Plus, iPhone 14 Pro, iPhone Pro Max.
+    // iPhone 15, iPhone 15 Plus, iPhone 15 Pro, iPhone 15 Pro Max.
+    // iPhone 16, iPhone 16 Plus, iPhone 16 Pro, iPhone 16 Pro Max.
     
     /*
      
@@ -354,10 +356,12 @@ import UIKit
      6.68 inch - normal - {{0, 0}, {428, 926}}
      6.68 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
      
-     iPhone 14 Pro Max, iPhone 15 Plus, iPhone 15 Pro Max
+     iPhone 14 Pro Max, iPhone 15 Plus, iPhone 15 Pro Max, iPhone 16 Plus
      6.69 inch - normal - {{0, 0}, {430, 932}}
+     iPhone 16 Pro Max
+     6.7 inch - normal - {{0, 0}, {440, 956}}
      6.69 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
-     
+               
      */
     
     // MARK: - DZ1
@@ -365,7 +369,7 @@ import UIKit
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
     // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
-    // iPhone 15, iPhone 15 Pro
+    // iPhone 15, iPhone 15 Pro, iPhone 16, iPhone 16 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
