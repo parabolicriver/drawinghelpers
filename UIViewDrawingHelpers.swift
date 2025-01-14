@@ -314,6 +314,55 @@ import UIKit
         }
         
         return isScale3 && widthAndHeightMatch;
+    }        
+    
+    // MARK: - 6.3
+    
+    // iPhone 16 Pro
+    
+    fileprivate static let kiPhoneRetina6_3Width = 402.0
+    fileprivate static let kiPhoneRetina6_3Height = 874.0
+    
+    class func iPhoneRetina6_3Width(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_3Height
+        } else {
+            return kiPhoneRetina6_3Width
+        }
+    }
+    
+    class func iPhoneRetina6_3Height(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_3Width
+        } else {
+            return kiPhoneRetina6_3Height
+        }
+    }
+    
+    class func iPhoneRetina6_3ScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetina6_3Width(landscape: landscape), height: iPhoneRetina6_3Height(landscape: landscape));
+    }
+    
+    class func iPhoneRetina6_3Bounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetina6_3ScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+    
+    class func isRetina6_3Inch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina6_3Height && screenBounds.size.width == kiPhoneRetina6_3Width) ||
+                (screenBounds.size.height == kiPhoneRetina6_3Width && screenBounds.size.width == kiPhoneRetina6_3Height)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
     }
     
     // MARK: - iPhones Display Zoomed
