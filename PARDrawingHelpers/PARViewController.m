@@ -86,7 +86,10 @@
         NSLog(@"is iPhone 6.06 inch %d", [UIView isRetina6_06Inch]);
         NSLog(@"is iPhone 6.68 inch %d", [UIView isRetina6_68Inch]);
         NSLog(@"is iPhone 6.12 inch %d", [UIView isRetina6_12Inch]);
-        NSLog(@"is iPhone 6.69 inch %d", [UIView isRetina6_69Inch]);
+        NSLog(@"is iPhone 6.69 inch %d", [UIView isRetina6_69Inch]);        
+        NSLog(@"is iPhone 6.3 inch %d", [UIView isRetina6_3Inch]);
+        NSLog(@"is iPhone 6.5a inch %d", [UIView isRetina6_5aInch]);
+        NSLog(@"is iPhone 6.9 inch %d", [UIView isRetina6_9Inch]);
         
         // iPhone display zoom tests
         NSLog(@"is iPhone DZ1 inch %d", [UIView isRetinaDZ1Inch]);

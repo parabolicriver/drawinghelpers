@@ -131,7 +131,7 @@ import UIKit
             
     // MARK: - 6.06
     
-    // iPhone 12, 12 Pro, 13, 13 Pro, 14
+    // iPhone 12, 12 Pro, 13, 13 Pro, 14, 16e
     
     fileprivate static let kiPhoneRetina6_06Width = 390.0
     fileprivate static let kiPhoneRetina6_06Height = 844.0
@@ -327,7 +327,7 @@ import UIKit
     
     // MARK: - 6.3
     
-    // iPhone 16 Pro
+    // iPhone 16 Pro, 17, 17 Pro
     
     fileprivate static let kiPhoneRetina6_3Width = 402.0
     fileprivate static let kiPhoneRetina6_3Height = 874.0
@@ -374,9 +374,60 @@ import UIKit
         return isScale3 && widthAndHeightMatch;
     }
     
+    // MARK: - 6.5a
+    
+    // iPhone Air
+    // 6.5 is an older size as well with
+    // a different size, so using 6.5a
+    
+    fileprivate static let kiPhoneRetina6_5aWidth = 420.0
+    fileprivate static let kiPhoneRetina6_5aHeight = 912.0
+    
+    class func iPhoneRetina6_5aWidth(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_5aHeight
+        } else {
+            return kiPhoneRetina6_5aWidth
+        }
+    }
+    
+    class func iPhoneRetina6_5aHeight(landscape: Bool) -> CGFloat {
+        if (landscape) {
+            return kiPhoneRetina6_5aWidth
+        } else {
+            return kiPhoneRetina6_5aHeight
+        }
+    }
+    
+    class func iPhoneRetina6_5aScreenSize(landscape: Bool) -> CGSize {
+        return CGSize(width: iPhoneRetina6_5aWidth(landscape: landscape), height: iPhoneRetina6_5aHeight(landscape: landscape));
+    }
+    
+    class func iPhoneRetina6_5aBounds(landscape: Bool) -> CGRect {
+        let size = iPhoneRetina6_5aScreenSize(landscape: landscape)
+        return CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height);
+    }
+        
+    class func isRetina6_5aInch() -> Bool {
+        var isScale3 = false
+        var widthAndHeightMatch = false
+        
+        if (UIView.isRetinaiPhone()) {
+            if (UIScreen.main.scale == 3.0) { isScale3 = true }
+            
+            let screenBounds = UIScreen.main.bounds
+            if ((screenBounds.size.height == kiPhoneRetina6_5aHeight && screenBounds.size.width == kiPhoneRetina6_5aWidth) ||
+                (screenBounds.size.height == kiPhoneRetina6_5aWidth && screenBounds.size.width == kiPhoneRetina6_5aHeight)) {
+                widthAndHeightMatch = true;
+            }
+        }
+        
+        return isScale3 && widthAndHeightMatch;
+    }
+    
     // MARK: - 6.9
     
-    // iPhone 16 Pro Max
+    // iPhone 16 Pro Max, 17 Pro Max
     
     fileprivate static let kiPhoneRetina6_9Width = 440.0
     fileprivate static let kiPhoneRetina6_9Height = 956.0
@@ -455,7 +506,7 @@ import UIKit
      6.1 inch - normal - {{0, 0}, {414, 896}}
      6.1 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
 
-     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
+     iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro, iPhone 16e
      6.06 inch - normal - {{0, 0}, {390, 844}}
      6.06 inch - zoomed - {{0, 0}, {320, 693}} - new zoomed size
 
@@ -465,10 +516,10 @@ import UIKit
      
      iPhone 14 Pro Max, iPhone 15 Plus, iPhone 15 Pro Max, iPhone 16 Plus
      6.69 inch - normal - {{0, 0}, {430, 932}}
-     iPhone 16 Pro Max
+     iPhone 16 Pro Max, iPhone 17 Pro Max, iPhone Air
      6.7 inch - normal - {{0, 0}, {440, 956}}
-     6.69 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 inch
-               
+     6.69 inch - zoomed - {{0, 0}, {375, 812}} - becomes same as 5.8 and 5.42 inch
+     
      */
     
     // MARK: - DZ1
@@ -476,7 +527,8 @@ import UIKit
     // iPhone Display Zoomed Size 1
     // iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini, iPhone 13 mini,
     // iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, iPhone 14, iPhone 14 Pro
-    // iPhone 15, iPhone 15 Pro, iPhone 16, iPhone 16 Pro
+    // iPhone 15, iPhone 15 Pro, iPhone 16, iPhone 16 Pro, iPhone 16e,
+    // iPhone 17, iPhone 17 Pro
     
     fileprivate static let kiPhoneRetinaDZ1Width = 320.0
     fileprivate static let kiPhoneRetinaDZ1Height = 693.0
