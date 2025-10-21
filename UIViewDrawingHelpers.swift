@@ -66,6 +66,15 @@ import UIKit
         }
     }
     
+    class func iOS26AndLater() -> Bool {
+        let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+        if iOSVersion >= 26 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     // MARK: - iPhones
     
     // MARK: - 5.42
